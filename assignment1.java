@@ -1,7 +1,6 @@
-git checkout -b feature-branch
-public class BadCode {
+
+public class assignment1 {
     public static void main(String[] args) {
-        int x = 10;
-        if (x == 10) 
+        System.out.println("Hello, world)
     }
 }
