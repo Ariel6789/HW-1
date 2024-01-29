@@ -1,6 +1,6 @@
 
 public class assignment1 {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
        System.out.println("Hello, World");
     }
 }
