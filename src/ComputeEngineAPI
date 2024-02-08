@@ -2,14 +2,14 @@ package apis;
 
 import java.util.List;
 
-public interface ComputeEngineInterface {
+public interface ComputeEngineAPI { //or ComputeEngineInterface the name need to match the file name
 
-	public void initializeJob();
+	public void InitializeJob();
 
-	public void readInput(List<Integer> input);
+	public void ReadInput(List<Integer> input);
 
-	public List<List<Integer>> writeOutput();
+	public List<List<Integer>> WriteOutput();
 
-	public void preformComputation();
+	public void PreformComputation();
 
 }
