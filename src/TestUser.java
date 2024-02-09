@@ -8,27 +8,27 @@ public class TestUser implements UserAPI{ //or UserInterface the naming on it is
     }
     
     @Override
-    public void setInputSrc(String src) {
+    public void setInputSource(String src) {
         // Empty
     }
 
     @Override
-    public void setOutputDest(String dest) { //destination
+    public void setOutputSource(String destination) { 
         // Empty
     }
 
     @Override
-    public void setInputDelimeter(String inDeli) {
+    public void setInputDelimiter(String inD) {
         // Empty
     }
 
     @Override
-    public void setOutputDelimeter(String outDeli) {
+    public void setOutputDelimiter(String outD) {
         // Empty
     }
 
     @Override
-    public String executeCompute(List<Integer> l){
+    public String executeComputation(List<Integer> l) {
         // EMPTY
         return ""; 
     }
