@@ -1,9 +1,9 @@
 import java.util.List;
 
 public class TestUser implements UserAPI{ //or UserInterface the naming on it is not clear
-    private ComputeEngineInterface computeEngine;
+    private ComputeEngineAPI computeEngine;
 
-    public TestUser(ComputeEngineInterface computeEngine) {
+    public TestUser(ComputeEngineAPI computeEngine) {
         this.computeEngine = computeEngine;
     }
     
@@ -29,9 +29,10 @@ public class TestUser implements UserAPI{ //or UserInterface the naming on it is
 
     @Override
     public String executeComputation(List<Integer> l) {
-        // EMPTY
-        return ""; 
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'executeComputaion'");
     }
+
 }
 
 

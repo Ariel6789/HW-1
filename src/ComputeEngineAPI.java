@@ -1,8 +1,7 @@
-package apis;
 
 import java.util.List;
-
-public interface ComputeEngineInterface {
+ 
+public interface ComputeEngineAPI { 
 
 	public void initializeJob();
 
@@ -10,6 +9,6 @@ public interface ComputeEngineInterface {
 
 	public List<List<Integer>> writeOutput();
 
-	public void preformComputation();
+	public void performComputation();
 
 }

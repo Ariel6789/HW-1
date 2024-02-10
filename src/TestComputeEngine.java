@@ -1,33 +1,33 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestComputeEngine implements ComputeEngineInterface {
-    // private DataStorageAPI dataStorage; //or DataStorageInterface 
+public class TestComputeEngine implements ComputeEngineAPI {
+     private DataStorageAPI dataStorage; // instance variable for the DataStorageAPI
     // private UserAPI userAPI; // UserInterface
 
-    public void testComputeEngine() {
-        //empty constructor
+    public void testComputeEngine(DataStorageAPI dataStorage) {
+        this.dataStorage = dataStorage; // could also be an empty constructor 
     }
 
     @Override
     public void initializeJob() {
-        // Empty
+        // This method will be used to initialize computation jobs
     }
 
     @Override
     public void readInput(List<Integer> input) {
-        // Empty
+        // This method will read input from the data storage
     }
 
     @Override
     public List<List<Integer>> writeOutput() {
-        //Empty 
+        // This method will write the computation results to the data storage 
         return new ArrayList<List<Integer>>();
     }
     
     @Override
-    public void preformComputation() {
-        // TODO Auto-generated method stub
+    public void performComputation() {
+        // TODO Auto-generated method stub // will handle the comptatuon logic 
         throw new UnsupportedOperationException("Unimplemented method 'preformComputation'");
     }
 }

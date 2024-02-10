@@ -15,8 +15,8 @@ public class TestDataStorage implements DataStorageAPI{
     }
 
     @Override
-    public String output(List<Integer> l) {
-        // Empty
-        return "";
+    public String outPut(List<Integer> l) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'outPut'");
     }
 }
