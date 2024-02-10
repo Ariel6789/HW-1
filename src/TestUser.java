@@ -1,5 +1,5 @@
 import java.util.List;
-
+// this is the TestUser class that implements the UserAPI interface
 public class TestUser implements UserAPI{ //or UserInterface the naming on it is not clear
     private ComputeEngineAPI computeEngine;
 
