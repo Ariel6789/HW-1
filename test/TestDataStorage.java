@@ -1,44 +1,23 @@
-import java.util.ArrayList;
-import java.util.List;
+package edu.softwareeng.sample;
 
-import org.junit.Test;
-import org.mockito.Mockito;
+/** 
+ * Test-only implementation of DataStore that handles in-memory inputs and outputs
+ */
+public class TestDataStorage implements DataStorage {
 
-import static org.mockito.Mockito.*;
+	@Override
+	public Iterable<Integer> read(InputConfig input) {
+		// Test code is allowed to assume it's getting the right types; this will fail with a ClassCastException if it gets
+		// another type of input. For production code, we'd want some better user input validation
+		return ((InMemoryInputConfig)input).getInputs();
+	}
 
-public class TestDataStorage implements DataStorageAPI{
-  //  private DataStorageAPI dataStorage; 
+	@Override
+	public WriteResult appendSingleResult(OutputConfig output, String result) {
+		// Test code is allowed to assume it's getting the right types; this will fail with a ClassCastException if it gets
+		// another type of input. For production code, we'd want some better user input validation
+		((InMemoryOutputConfig)output).getOutputMutable().add(result);
+		return () -> WriteResult.WriteResultStatus.SUCCESS;
+	}
 
-   @Test
-    public void testDataStorage() {
-        // Constructor
-      
-        DataStorage dataStorageMock = Mockito.mock(DataStorage.class);
-
-        when(dataStorageMock.saveData(any(String.class))).thenReturn(true);
-
-        boolean result = dataStorageMock.saveData(test data);
-
-        verify(dataStorageMock).saveData(test data);
-
-        assertTrue(result);
-    }
-
-
-    }
-
-    @Override
-    public List<Integer> input(String input) {
-        // Empty
-        return new ArrayList<Integer>();
-    }
-
-    @Override
-    public String outPut(List<Integer> l) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'outPut'");
-    }
 }
-
-    
-  
