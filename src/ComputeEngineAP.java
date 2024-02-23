@@ -1,6 +1,6 @@
 import java.util.List;
 
-public interface ComputeEngineAPI {
+public interface ComputeEngineAP {
 
 	public void initializeJob();
 
