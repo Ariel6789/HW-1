@@ -4,7 +4,7 @@ import java.util.Collections;
 
 import edu.softwareeng.sample.WriteResult.WriteResultStatus;
 
-public class DataStoreImpl implements DataStore {
+public class DataStorageImpl implements DataStorage {
 
 	@Override
 	public Iterable<Integer> read(InputConfig input) {
