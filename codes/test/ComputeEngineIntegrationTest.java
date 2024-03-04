@@ -26,7 +26,7 @@ public class ComputeEngineIntegrationTest {
 		ComputeRequest mockRequest = Mockito.mock(ComputeRequest.class);
 		when(mockRequest.getInputConfig()).thenReturn(30);
 		//when(mockRequest.getOutputConfig()).thenReturn(output);
-		when(mockRequest.getDelimiter()).thenReturn(','); // Assuming the delimiter is for formatting output
+		when(mockRequest.getDelimiter()).thenReturn(','); 
 		
 	 // Execute the computation
 	 int[] actualPrimeFactors = engine.computePrimeFactors(mockRequest.getInputConfig());
