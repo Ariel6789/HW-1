@@ -4,6 +4,13 @@
           "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
+  <!-- Yousup Added LineLength checkstyle rule-->
+  <module name="LineLength">
+    <property name="fileExtensions" value="java"/>
+    <property name="max" value="100"/>
+    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+  </module>
+          
   <module name="SuppressWarningsFilter"/>
 
   <property name="charset" value="UTF-8"/>
@@ -24,6 +31,12 @@
   </module>
 
   <module name="TreeWalker">
+  <!--Joel Added WhitespaceAfter checklist rule -->
+    <module name="WhitespaceAfter">
+      <property name="tokens" value="COMMA"/>
+    </module>
+  <!-- Brandon placed UnusedImports checkstyle rule -->  
+    <module name="UnusedImports"/>
     <module name="OuterTypeFilename"/>
     <module name="IllegalTokenText">
       <property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
@@ -38,7 +51,6 @@
       <property name="allowNonPrintableEscapes" value="true"/>
     </module>
     <module name="AvoidStarImport"/>
-    <module name="OneTopLevelClass"/>
     <module name="NoLineWrap">
       <property name="tokens" value="PACKAGE_DEF, IMPORT, STATIC_IMPORT"/>
     </module>
