@@ -39,7 +39,7 @@ public class ComputeEngineIntegrationTest {
 		//InMemoryOutputConfig output = new InMemoryOutputConfig();
 		
 		// This is the actual object we're testing
-<<<<<<< Updated upstream
+<<<g<<<< Updated upstream
 	
 		when(mockRequestObj.getInputConfig()).thenReturn(inputConfig);
 =======

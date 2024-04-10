@@ -1,113 +1,65 @@
-    package src;
+package src;
+
+import io.grpc.Server;
+import io.grpc.ServerBuilder;
+import io.grpc.stub.StreamObserver;
+import src.StorageComputationServiceGrpc.StorageComputationServiceImplBase;
+import src.StorageComputationServiceOuterClass.*;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
-import src.WriteResult.WriteResultStatus;
+public class DataStorageAPI extends StorageComputationServiceImplBase {
 
-
-public class DataStorageAPI implements DataStore {
-	
+	// Implement the rpc methods defined in .proto
 	@Override
-	public Iterable<Integer> read(InputConfig input) {
-		// Use the visitor pattern so that we can easily and safely add additional config types in the future
-		return InputConfig.visitInputConfig(input, fileConfig -> {
-			
-			// Iterables are more convenient for method callers than iterators, so wrap our file-based iterator before returning
-			return new Iterable<Integer>() {
-				@Override
-				public Iterator<Integer> iterator() {
-					return getFileBasedIterator(fileConfig.getFileName());
-				}
-			};
-		});
-	}
-
-	private Iterator<Integer> getFileBasedIterator(String fileName) {
-		try {
-			return new Iterator<Integer>() {
-				// A Scanner is also fine to use, but has an important difference as we add threads:
-				// BufferedReader is by default thread-safe, but Scanner is not (like a synchronizedList vs ArrayList)
-				// BufferedReader is also slightly more efficient at large file reads (larger buffer than Scanner),
-				// but by default breaks at newlines rather than all whitespace, and doesn't parse the
-				// input as it goes
-				BufferedReader buff = new BufferedReader(new FileReader(fileName));
-				String line = buff.readLine(); // read the first line so that hasNext() correctly recognizes empty files as empty
-				boolean closed = false;
-
-				@Override
-				public Integer next() {
-					// this particular iterator reads the first line during the (implicit) constructor, so line is already
-					// set up for the next integer
-					int result = Integer.parseInt(line);
-					try {
-						line = buff.readLine();
-						if (!hasNext()) {
-							buff.close();
-							closed = true;
-						}
-					} catch (IOException e) {
-						throw new RuntimeException(e);
-					}
-					
-					return result;
-				}
-
-				@Override
-				public boolean hasNext() {
-					return line != null;
-				}
-				
-				/*
-				 * finalize() is a method on Object, much like toString or equals. It's called when an object is garbage collected, and is used as
-				 * a final cleanup step for resources. It's a bit fragile - it isn't guaranteed to always be called, or be called at any specific time - 
-				 * but unless a cleanup is particularly critical, it's generally sufficient as a back-stop against weird circumstances. In this case,
-				 * we would at worst leak a read-lock file handle, which is NBD and certainly not worth architecting a larger solution around (honestly,
-				 * finalize() might even be overkill in this situation).
-				 */
-				@Override
-				public void finalize() {
-					if (!closed) {
-						try {
-							buff.close();
-							closed = true;
-						} catch (IOException e) {
-							throw new RuntimeException(e);
-						}
-					}
-				}
-			};
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
+	public void getInput(UserInput request, StreamObserver<NumericSequence> responseObserver) {
+		// Implement your logic here to read numbers based on UserInput
+		// For example, let's read a single number and return it in a list
+		List<Integer> numbers = new ArrayList<>();
+		numbers.add(request.getNumber());
+		NumericSequence reply = NumericSequence.newBuilder().addAllNumbers(numbers).build();
+		responseObserver.onNext(reply);
+		responseObserver.onCompleted();
 	}
 
 	@Override
-	public WriteResult appendSingleResult(OutputConfig output, String result, char delimiter) {
-		OutputConfig.visitOutputConfig(output, config -> {
-			writeToFile(config.getFileName(), result + delimiter);
-		});
-		
-		/* 
-		 * Using lambda syntax to create an instance of WriteResult. This is an alternative to the ComputeResult approach of providing
-		 * constants for success/failure.
-		 */
-		return () -> WriteResultStatus.SUCCESS; 
+	public void commit(CommitParameters request, StreamObserver<CommitResponse> responseObserver) {
+		// Implement your logic here to write numbers to the destination with the specified separator
+		// For example, let's write the large integer to the specified file
+		writeToFile(request.getStorageTarget().getDestination(),
+				String.valueOf(request.getBigInteger().getBigValue()),
+				request.getSeparator().getDelimiter());
+
+		// Assume the write operation was successful and send a response
+		CommitResponse reply = CommitResponse.newBuilder().build();
+		responseObserver.onNext(reply);
+		responseObserver.onCompleted();
 	}
 
-	private void writeToFile(String fileName, String line) {
-		// use try-with-resources syntax to automatically close the file writer
-		// use the append-friendly version of the constructor
-		try (FileWriter writer = new FileWriter(new File(fileName), true)) {
-			writer.append(line);
+	private void writeToFile(String fileName, String content, String delimiter) {
+		// Add your file writing logic here
+		try (FileWriter writer = new FileWriter(fileName, true)) {
+			writer.append(content).append(delimiter);
 		} catch (IOException e) {
-			throw new RuntimeException(e);
+			throw new RuntimeException("Failed to write to file: " + fileName, e);
 		}
 	}
 
+	public static void main(String[] args) throws IOException, InterruptedException {
+		// The port that the server should run on can be passed as an argument
+		// Defaults to 8080 if no argument is passed
+		int port = args.length > 0 ? Integer.parseInt(args[0]) : 8080;
+		Server server = ServerBuilder.forPort(port)
+				.addService(new DataStorageAPI())
+				.build()
+				.start();
 
+		System.out.println("Server started, listening on " + port);
+		server.awaitTermination();
+	}
 }

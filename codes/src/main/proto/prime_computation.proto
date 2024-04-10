@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package primefactor;
+
+// The request message containing the integer.
+message PrimeFactorRequest {
+  int64 number = 1;
+}
+
+// The response message containing the list of prime factors.
+message PrimeFactorResponse {
+  repeated int64 primeFactors = 1;
+}
+
+// The service definition.
+service PrimeFactorization {
+  // Sends a single positive integer and receives a list of prime factors.
+  rpc ComputePrimeFactors(PrimeFactorRequest) returns (PrimeFactorResponse);
+}
