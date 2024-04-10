@@ -6,7 +6,7 @@ message TestDataConfiguration {
   string outputFilePath = 2; // Location of the test output file
 }
 
-// Contains details for the coordinator implementation
+// Contains details for the coordinator implementation /
 message CoordinatorImpl {
   string executionFilePath = 1; // File path used for source code execution
   TestDataConfiguration testPaths = 2; // Data paths for input and output during testing

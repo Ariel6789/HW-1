@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class UserInterface {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException { //
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             System.out.print("Enter a positive integer: ");
             long number = Long.parseLong(reader.readLine());

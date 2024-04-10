@@ -9,7 +9,7 @@ message PrimeFactorRequest {
 
 // The response message containing the list of prime factors.
 message PrimeFactorResponse {
-  repeated int64 primeFactors = 1;
+  repeated int64 primeFactors = 1; //
 }
 
 // The service definition.

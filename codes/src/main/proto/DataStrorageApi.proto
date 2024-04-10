@@ -8,7 +8,7 @@ service StorageComputationService {
   // Commits the processed data to the specified location
   rpc commit(CommitParameters) returns (CommitResponse) {}
 
-}
+} //
 
 message NumericSequence {
   // List of integer values

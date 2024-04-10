@@ -26,7 +26,7 @@ public class ComputationCoordinatorImpl extends ComputationCoordinatorGrpc.Compu
 					.setComputationDetails("Prime factors: " + result)
 					.build();
 
-			responseObserver.onNext(outcome);
+			responseObserver.onNext(outcome); //
 			responseObserver.onCompleted();
 		} catch (NumberFormatException e) {
 			responseObserver.onError(e);

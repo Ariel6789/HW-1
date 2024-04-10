@@ -8,7 +8,7 @@ public class ComputeEngineImpl implements ComputeEngine, ComputationCoordinator 
 		return primeFactors(value);
 	}
 
-	public int[] primeFactors(int number) {
+	public int[] primeFactors(int number) { //
         int[] tempFactors = new int[number];
 		int count = 0; // Count of prime factors
 
