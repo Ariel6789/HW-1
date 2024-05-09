@@ -1,8 +1,7 @@
 package computeenginetests;
 
-import computeengine.ComputeEngine;
 import computeengine.ComputeEngineImpl;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ThreadLocalRandom;
@@ -13,7 +12,7 @@ public class ComputeTest {
 		// The computation component has very simple inputs/outputs and no dependencies, so we can
 		// write a smoke test with no mocks at all
 		
-		ComputeEngine engine = new ComputeEngineImpl();
+		ComputeEngineImpl engine = new ComputeEngineImpl();
 
 		// Benchmarking (Before Optimization)
 		long startTimeBefore = System.nanoTime();
@@ -24,7 +23,7 @@ public class ComputeTest {
 		double totalTimeBefore = (endTimeBefore - startTimeBefore) / 1e9; // Convert to seconds
 
 		// Optimized computePrimeFactors`implementation
-		((ComputeEngineImpl) engine).setComputePrimeFactorsOptimized(true); // Assuming setter for optimization flag
+		engine.setComputePrimeFactorsOptimized(true); // Assuming setter for optimization flag
 
 		// Benchmarking (After Optimization)
 		long startTimeAfter = System.nanoTime();
@@ -35,7 +34,7 @@ public class ComputeTest {
 		double totalTimeAfter = (endTimeAfter - startTimeAfter) / 1e9; // Convert to seconds
 
 
-		Assert.assertTrue("Optimized version should be faster", totalTimeBefore > totalTimeAfter);
+		Assertions.assertTrue(totalTimeBefore > totalTimeAfter, "Optimized version should be faster");
 
 		System.out.println("**Performance Improvement Summary**");
 		System.out.println("  - Baseline execution time (10000 iterations): " + totalTimeBefore + " seconds");
@@ -44,13 +43,13 @@ public class ComputeTest {
 
 
 		// Testing the computePrimeFactors for the value 1, expecting an empty array since 1 has no prime factors
-        Assert.assertArrayEquals(new int[]{}, engine.computePrimeFactors(1));
+        Assertions.assertArrayEquals(new int[]{}, engine.computePrimeFactors(1));
 
         // Additional test cases can be added as needed to thoroughly test the computePrimeFactors method
         // For example, testing the computePrimeFactors for the value 2, expecting an array containing only 2
-        Assert.assertArrayEquals(new int[]{2}, engine.computePrimeFactors(2));
+        Assertions.assertArrayEquals(new int[]{2}, engine.computePrimeFactors(2));
 
         // Testing for a number with multiple prime factors, e.g., 12 = 2 * 2 * 3
-        Assert.assertArrayEquals(new int[]{2, 2, 3}, engine.computePrimeFactors(12));
+        Assertions.assertArrayEquals(new int[]{2, 2, 3}, engine.computePrimeFactors(12));
 	}
 }
