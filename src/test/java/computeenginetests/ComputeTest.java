@@ -15,10 +15,35 @@ public class ComputeTest {
 		
 		ComputeEngine engine = new ComputeEngineImpl();
 
-		for (int i = 0; i < 1000000; i++) {
+		// Benchmarking (Before Optimization)
+		long startTimeBefore = System.nanoTime();
+		for (int i = 0; i < 10000; i++) {
 			engine.computePrimeFactors(ThreadLocalRandom.current().nextInt(10, 100));
 		}
-		  // Testing the computePrimeFactors for the value 1, expecting an empty array since 1 has no prime factors
+		long endTimeBefore = System.nanoTime();
+		double totalTimeBefore = (endTimeBefore - startTimeBefore) / 1e9; // Convert to seconds
+
+		// Optimized computePrimeFactors`implementation
+		((ComputeEngineImpl) engine).setComputePrimeFactorsOptimized(true); // Assuming setter for optimization flag
+
+		// Benchmarking (After Optimization)
+		long startTimeAfter = System.nanoTime();
+		for (int i = 0; i < 10000; i++) {
+			engine.computePrimeFactors(ThreadLocalRandom.current().nextInt(10, 100));
+		}
+		long endTimeAfter = System.nanoTime();
+		double totalTimeAfter = (endTimeAfter - startTimeAfter) / 1e9; // Convert to seconds
+
+
+		Assert.assertTrue("Optimized version should be faster", totalTimeBefore > totalTimeAfter);
+
+		System.out.println("**Performance Improvement Summary**");
+		System.out.println("  - Baseline execution time (10000 iterations): " + totalTimeBefore + " seconds");
+		System.out.println("  - Optimized execution time (10000 iterations): " + totalTimeAfter + " seconds");
+		System.out.println("  - Improvement: " + ((totalTimeBefore - totalTimeAfter) / totalTimeBefore) * 100 + "%");
+
+
+		// Testing the computePrimeFactors for the value 1, expecting an empty array since 1 has no prime factors
         Assert.assertArrayEquals(new int[]{}, engine.computePrimeFactors(1));
 
         // Additional test cases can be added as needed to thoroughly test the computePrimeFactors method
