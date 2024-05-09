@@ -1,6 +1,8 @@
 package computeenginetests;
 
+import computeengine.ComputeEngine;
 import computeengine.ComputeEngineImpl;
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +14,7 @@ public class ComputeTest {
 		// The computation component has very simple inputs/outputs and no dependencies, so we can
 		// write a smoke test with no mocks at all
 		
-		ComputeEngineImpl engine = new ComputeEngineImpl();
+		ComputeEngine engine = new ComputeEngineImpl();
 
 		// Benchmarking (Before Optimization)
 		long startTimeBefore = System.nanoTime();
@@ -23,7 +25,7 @@ public class ComputeTest {
 		double totalTimeBefore = (endTimeBefore - startTimeBefore) / 1e9; // Convert to seconds
 
 		// Optimized computePrimeFactors`implementation
-		engine.setComputePrimeFactorsOptimized(true); // Assuming setter for optimization flag
+		((ComputeEngineImpl) engine).setComputePrimeFactorsOptimized(true); // Assuming setter for optimization flag
 
 		// Benchmarking (After Optimization)
 		long startTimeAfter = System.nanoTime();
@@ -43,13 +45,13 @@ public class ComputeTest {
 
 
 		// Testing the computePrimeFactors for the value 1, expecting an empty array since 1 has no prime factors
-        Assertions.assertArrayEquals(new int[]{}, engine.computePrimeFactors(1));
+        Assert.assertArrayEquals(new int[]{}, engine.computePrimeFactors(1));
 
         // Additional test cases can be added as needed to thoroughly test the computePrimeFactors method
         // For example, testing the computePrimeFactors for the value 2, expecting an array containing only 2
-        Assertions.assertArrayEquals(new int[]{2}, engine.computePrimeFactors(2));
+        Assert.assertArrayEquals(new int[]{2}, engine.computePrimeFactors(2));
 
         // Testing for a number with multiple prime factors, e.g., 12 = 2 * 2 * 3
-        Assertions.assertArrayEquals(new int[]{2, 2, 3}, engine.computePrimeFactors(12));
+        Assert.assertArrayEquals(new int[]{2, 2, 3}, engine.computePrimeFactors(12));
 	}
 }
