@@ -1,0 +1,516 @@
+Index: gradle-8.6.ipr
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <option name=\"DEFAULT_COMPILER\" value=\"Javac\"/>\r\n    <resourceExtensions>\r\n      <entry name=\".+\\.(properties|xml|html|dtd|tld)\"/>\r\n      <entry name=\".+\\.(gif|png|jpeg|jpg)\"/>\r\n    </resourceExtensions>\r\n    <wildcardResourcePatterns>\r\n      <entry name=\"!?*.class\"/>\r\n      <entry name=\"!?*.scala\"/>\r\n      <entry name=\"!?*.groovy\"/>\r\n      <entry name=\"!?*.java\"/>\r\n    </wildcardResourcePatterns>\r\n    <annotationProcessing enabled=\"false\" useClasspath=\"true\"/>\r\n    <bytecodeTargetLevel target=\"19\"/>\r\n  </component>\r\n  <component name=\"CopyrightManager\" default=\"\">\r\n    <module2copyright/>\r\n  </component>\r\n  <component name=\"DependencyValidationManager\">\r\n    <option name=\"SKIP_IMPORT_STATEMENTS\" value=\"false\"/>\r\n  </component>\r\n  <component name=\"Encoding\" useUTFGuessing=\"true\" native2AsciiForPropertiesFiles=\"false\"/>\r\n  <component name=\"GradleUISettings\">\r\n    <setting name=\"root\"/>\r\n  </component>\r\n  <component name=\"GradleUISettings2\">\r\n    <setting name=\"root\"/>\r\n  </component>\r\n  <component name=\"IdProvider\" IDEtalkID=\"11DA1DB66DD62DDA1ED602B7079FE97C\"/>\r\n  <component name=\"JavadocGenerationManager\">\r\n    <option name=\"OUTPUT_DIRECTORY\"/>\r\n    <option name=\"OPTION_SCOPE\" value=\"protected\"/>\r\n    <option name=\"OPTION_HIERARCHY\" value=\"true\"/>\r\n    <option name=\"OPTION_NAVIGATOR\" value=\"true\"/>\r\n    <option name=\"OPTION_INDEX\" value=\"true\"/>\r\n    <option name=\"OPTION_SEPARATE_INDEX\" value=\"true\"/>\r\n    <option name=\"OPTION_DOCUMENT_TAG_USE\" value=\"false\"/>\r\n    <option name=\"OPTION_DOCUMENT_TAG_AUTHOR\" value=\"false\"/>\r\n    <option name=\"OPTION_DOCUMENT_TAG_VERSION\" value=\"false\"/>\r\n    <option name=\"OPTION_DOCUMENT_TAG_DEPRECATED\" value=\"true\"/>\r\n    <option name=\"OPTION_DEPRECATED_LIST\" value=\"true\"/>\r\n    <option name=\"OTHER_OPTIONS\" value=\"\"/>\r\n    <option name=\"HEAP_SIZE\"/>\r\n    <option name=\"LOCALE\"/>\r\n    <option name=\"OPEN_IN_BROWSER\" value=\"true\"/>\r\n  </component>\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/gradle-8.6.iml\" filepath=\"$PROJECT_DIR$/gradle-8.6.iml\"/>\r\n    </modules>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" assert-keyword=\"true\" jdk-15=\"true\" project-jdk-type=\"JavaSDK\" assert-jdk-15=\"true\" project-jdk-name=\"19\">\r\n    <output url=\"file://$PROJECT_DIR$/out\"/>\r\n  </component>\r\n  <component name=\"SvnBranchConfigurationManager\">\r\n    <option name=\"mySupportsUserInfoFilter\" value=\"true\"/>\r\n  </component>\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"\" vcs=\"\"/>\r\n  </component>\r\n  <component name=\"masterDetails\">\r\n    <states>\r\n      <state key=\"ArtifactsStructureConfigurable.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl/>\r\n          </splitter-proportions>\r\n          <settings/>\r\n        </UIState>\r\n      </state>\r\n      <state key=\"Copyright.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl/>\r\n          </splitter-proportions>\r\n        </UIState>\r\n      </state>\r\n      <state key=\"ProjectJDKs.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl>\r\n              <option name=\"proportions\">\r\n                <list>\r\n                  <option value=\"0.2\"/>\r\n                </list>\r\n              </option>\r\n            </SplitterProportionsDataImpl>\r\n          </splitter-proportions>\r\n          <last-edited>1.6</last-edited>\r\n        </UIState>\r\n      </state>\r\n      <state key=\"ScopeChooserConfigurable.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl/>\r\n          </splitter-proportions>\r\n          <settings/>\r\n        </UIState>\r\n      </state>\r\n    </states>\r\n  </component>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle-8.6.ipr b/gradle-8.6.ipr
+--- a/gradle-8.6.ipr	
++++ b/gradle-8.6.ipr	
+@@ -1,79 +1,82 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="CompilerConfiguration">
+-    <option name="DEFAULT_COMPILER" value="Javac"/>
+     <resourceExtensions>
+-      <entry name=".+\.(properties|xml|html|dtd|tld)"/>
+-      <entry name=".+\.(gif|png|jpeg|jpg)"/>
++      <entry name=".+\.(properties|xml|html|dtd|tld)" />
++      <entry name=".+\.(gif|png|jpeg|jpg)" />
+     </resourceExtensions>
+     <wildcardResourcePatterns>
+-      <entry name="!?*.class"/>
+-      <entry name="!?*.scala"/>
+-      <entry name="!?*.groovy"/>
+-      <entry name="!?*.java"/>
++      <entry name="!?*.class" />
++      <entry name="!?*.scala" />
++      <entry name="!?*.groovy" />
++      <entry name="!?*.java" />
+     </wildcardResourcePatterns>
+-    <annotationProcessing enabled="false" useClasspath="true"/>
+-    <bytecodeTargetLevel target="19"/>
++    <bytecodeTargetLevel target="19" />
+   </component>
+   <component name="CopyrightManager" default="">
+-    <module2copyright/>
++    <module2copyright />
+   </component>
+   <component name="DependencyValidationManager">
+-    <option name="SKIP_IMPORT_STATEMENTS" value="false"/>
++    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+   </component>
+-  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false"/>
+   <component name="GradleUISettings">
+-    <setting name="root"/>
++    <setting name="root" />
+   </component>
+   <component name="GradleUISettings2">
+-    <setting name="root"/>
++    <setting name="root" />
+   </component>
+-  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C"/>
++  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
++  <component name="InspectionProjectProfileManager">
++    <profile version="1.0">
++      <option name="myName" value="Project Default" />
++    </profile>
++    <version value="1.0" />
++  </component>
+   <component name="JavadocGenerationManager">
+-    <option name="OUTPUT_DIRECTORY"/>
+-    <option name="OPTION_SCOPE" value="protected"/>
+-    <option name="OPTION_HIERARCHY" value="true"/>
+-    <option name="OPTION_NAVIGATOR" value="true"/>
+-    <option name="OPTION_INDEX" value="true"/>
+-    <option name="OPTION_SEPARATE_INDEX" value="true"/>
+-    <option name="OPTION_DOCUMENT_TAG_USE" value="false"/>
+-    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false"/>
+-    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false"/>
+-    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true"/>
+-    <option name="OPTION_DEPRECATED_LIST" value="true"/>
+-    <option name="OTHER_OPTIONS" value=""/>
+-    <option name="HEAP_SIZE"/>
+-    <option name="LOCALE"/>
+-    <option name="OPEN_IN_BROWSER" value="true"/>
++    <option name="OUTPUT_DIRECTORY" />
++    <option name="OPTION_SCOPE" value="protected" />
++    <option name="OPTION_HIERARCHY" value="true" />
++    <option name="OPTION_NAVIGATOR" value="true" />
++    <option name="OPTION_INDEX" value="true" />
++    <option name="OPTION_SEPARATE_INDEX" value="true" />
++    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
++    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
++    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
++    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
++    <option name="OPTION_DEPRECATED_LIST" value="true" />
++    <option name="OTHER_OPTIONS" value="" />
++    <option name="HEAP_SIZE" />
++    <option name="LOCALE" />
++    <option name="OPEN_IN_BROWSER" value="true" />
+   </component>
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/gradle-8.6.iml" filepath="$PROJECT_DIR$/gradle-8.6.iml"/>
++      <module fileurl="file://$PROJECT_DIR$/gradle-8.6.iml" filepath="$PROJECT_DIR$/gradle-8.6.iml" />
+     </modules>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" assert-keyword="true" jdk-15="true" project-jdk-type="JavaSDK" assert-jdk-15="true" project-jdk-name="19">
+-    <output url="file://$PROJECT_DIR$/out"/>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="19" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
+   </component>
+   <component name="SvnBranchConfigurationManager">
+-    <option name="mySupportsUserInfoFilter" value="true"/>
++    <option name="mySupportsUserInfoFilter" value="true" />
+   </component>
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="" vcs=""/>
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+   </component>
+   <component name="masterDetails">
+     <states>
+       <state key="ArtifactsStructureConfigurable.UI">
+         <UIState>
+           <splitter-proportions>
+-            <SplitterProportionsDataImpl/>
++            <SplitterProportionsDataImpl />
+           </splitter-proportions>
+-          <settings/>
++          <settings />
+         </UIState>
+       </state>
+       <state key="Copyright.UI">
+         <UIState>
+           <splitter-proportions>
+-            <SplitterProportionsDataImpl/>
++            <SplitterProportionsDataImpl />
+           </splitter-proportions>
+         </UIState>
+       </state>
+@@ -83,7 +86,7 @@
+             <SplitterProportionsDataImpl>
+               <option name="proportions">
+                 <list>
+-                  <option value="0.2"/>
++                  <option value="0.2" />
+                 </list>
+               </option>
+             </SplitterProportionsDataImpl>
+@@ -94,11 +97,11 @@
+       <state key="ScopeChooserConfigurable.UI">
+         <UIState>
+           <splitter-proportions>
+-            <SplitterProportionsDataImpl/>
++            <SplitterProportionsDataImpl />
+           </splitter-proportions>
+-          <settings/>
++          <settings />
+         </UIState>
+       </state>
+     </states>
+   </component>
+-</project>
++</project>
+\ No newline at end of file
+Index: gradle-8.6.iws
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <option name=\"TRACKING_ENABLED\" value=\"true\"/>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\"/>\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\"/>\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\"/>\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\"/>\r\n  </component>\r\n  <component name=\"ChangesViewManager\" flattened_view=\"true\" show_ignored=\"false\"/>\r\n  <component name=\"CreatePatchCommitExecutor\">\r\n    <option name=\"PATCH_PATH\" value=\"\"/>\r\n    <option name=\"REVERSE_PATCH\" value=\"false\"/>\r\n  </component>\r\n  <component name=\"DaemonCodeAnalyzer\">\r\n    <disable_hints/>\r\n  </component>\r\n  <component name=\"DebuggerManager\">\r\n    <breakpoint_any>\r\n      <breakpoint>\r\n        <option name=\"NOTIFY_CAUGHT\" value=\"true\"/>\r\n        <option name=\"NOTIFY_UNCAUGHT\" value=\"true\"/>\r\n        <option name=\"ENABLED\" value=\"false\"/>\r\n        <option name=\"LOG_ENABLED\" value=\"false\"/>\r\n        <option name=\"LOG_EXPRESSION_ENABLED\" value=\"false\"/>\r\n        <option name=\"SUSPEND_POLICY\" value=\"SuspendAll\"/>\r\n        <option name=\"COUNT_FILTER_ENABLED\" value=\"false\"/>\r\n        <option name=\"COUNT_FILTER\" value=\"0\"/>\r\n        <option name=\"CONDITION_ENABLED\" value=\"false\"/>\r\n        <option name=\"CLASS_FILTERS_ENABLED\" value=\"false\"/>\r\n        <option name=\"INSTANCE_FILTERS_ENABLED\" value=\"false\"/>\r\n        <option name=\"CONDITION\" value=\"\"/>\r\n        <option name=\"LOG_MESSAGE\" value=\"\"/>\r\n      </breakpoint>\r\n      <breakpoint>\r\n        <option name=\"NOTIFY_CAUGHT\" value=\"true\"/>\r\n        <option name=\"NOTIFY_UNCAUGHT\" value=\"true\"/>\r\n        <option name=\"ENABLED\" value=\"false\"/>\r\n        <option name=\"LOG_ENABLED\" value=\"false\"/>\r\n        <option name=\"LOG_EXPRESSION_ENABLED\" value=\"false\"/>\r\n        <option name=\"SUSPEND_POLICY\" value=\"SuspendAll\"/>\r\n        <option name=\"COUNT_FILTER_ENABLED\" value=\"false\"/>\r\n        <option name=\"COUNT_FILTER\" value=\"0\"/>\r\n        <option name=\"CONDITION_ENABLED\" value=\"false\"/>\r\n        <option name=\"CLASS_FILTERS_ENABLED\" value=\"false\"/>\r\n        <option name=\"INSTANCE_FILTERS_ENABLED\" value=\"false\"/>\r\n        <option name=\"CONDITION\" value=\"\"/>\r\n        <option name=\"LOG_MESSAGE\" value=\"\"/>\r\n      </breakpoint>\r\n    </breakpoint_any>\r\n    <breakpoint_rules/>\r\n    <ui_properties/>\r\n  </component>\r\n  <component name=\"ModuleEditorState\">\r\n    <option name=\"LAST_EDITED_MODULE_NAME\"/>\r\n    <option name=\"LAST_EDITED_TAB_NAME\"/>\r\n  </component>\r\n  <component name=\"ProjectInspectionProfilesVisibleTreeState\">\r\n    <entry key=\"Project Default\">\r\n      <profile-state/>\r\n    </entry>\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <OptionsSetting value=\"true\" id=\"Add\"/>\r\n    <OptionsSetting value=\"true\" id=\"Remove\"/>\r\n    <OptionsSetting value=\"true\" id=\"Checkout\"/>\r\n    <OptionsSetting value=\"true\" id=\"Update\"/>\r\n    <OptionsSetting value=\"true\" id=\"Status\"/>\r\n    <OptionsSetting value=\"true\" id=\"Edit\"/>\r\n    <ConfirmationsSetting value=\"0\" id=\"Add\"/>\r\n    <ConfirmationsSetting value=\"0\" id=\"Remove\"/>\r\n  </component>\r\n  <component name=\"ProjectReloadState\">\r\n    <option name=\"STATE\" value=\"0\"/>\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"GoToFile.includeJavaFiles\" value=\"false\"/>\r\n    <property name=\"GoToClass.toSaveIncludeLibraries\" value=\"false\"/>\r\n    <property name=\"MemberChooser.sorted\" value=\"false\"/>\r\n    <property name=\"MemberChooser.showClasses\" value=\"true\"/>\r\n    <property name=\"GoToClass.includeLibraries\" value=\"false\"/>\r\n    <property name=\"MemberChooser.copyJavadoc\" value=\"false\"/>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"Remote\" factoryName=\"Remote\">\r\n      <option name=\"USE_SOCKET_TRANSPORT\" value=\"true\"/>\r\n      <option name=\"SERVER_MODE\" value=\"false\"/>\r\n      <option name=\"SHMEM_ADDRESS\" value=\"javadebug\"/>\r\n      <option name=\"HOST\" value=\"localhost\"/>\r\n      <option name=\"PORT\" value=\"5005\"/>\r\n      <method>\r\n        <option name=\"BuildArtifacts\" enabled=\"false\"/>\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"Applet\" factoryName=\"Applet\">\r\n      <module name=\"\"/>\r\n      <option name=\"MAIN_CLASS_NAME\"/>\r\n      <option name=\"HTML_FILE_NAME\"/>\r\n      <option name=\"HTML_USED\" value=\"false\"/>\r\n      <option name=\"WIDTH\" value=\"400\"/>\r\n      <option name=\"HEIGHT\" value=\"300\"/>\r\n      <option name=\"POLICY_FILE\" value=\"$APPLICATION_HOME_DIR$/bin/appletviewer.policy\"/>\r\n      <option name=\"VM_PARAMETERS\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"false\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH\"/>\r\n      <method>\r\n        <option name=\"BuildArtifacts\" enabled=\"false\"/>\r\n        <option name=\"Make\" enabled=\"true\"/>\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"Application\" factoryName=\"Application\">\r\n      <extension name=\"coverage\" enabled=\"false\" merge=\"false\"/>\r\n      <option name=\"MAIN_CLASS_NAME\"/>\r\n      <option name=\"VM_PARAMETERS\"/>\r\n      <option name=\"PROGRAM_PARAMETERS\"/>\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"false\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH\"/>\r\n      <option name=\"ENABLE_SWING_INSPECTOR\" value=\"false\"/>\r\n      <option name=\"ENV_VARIABLES\"/>\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"true\"/>\r\n      <module name=\"\"/>\r\n      <envs/>\r\n      <method>\r\n        <option name=\"BuildArtifacts\" enabled=\"false\"/>\r\n        <option name=\"Make\" enabled=\"true\"/>\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JUnit\" factoryName=\"JUnit\">\r\n      <extension name=\"coverage\" enabled=\"false\" merge=\"false\"/>\r\n      <module name=\"\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"false\"/>\r\n      <option name=\"ALTERNATIVE_JRE_PATH\"/>\r\n      <option name=\"PACKAGE_NAME\"/>\r\n      <option name=\"MAIN_CLASS_NAME\"/>\r\n      <option name=\"METHOD_NAME\"/>\r\n      <option name=\"TEST_OBJECT\" value=\"class\"/>\r\n      <option name=\"VM_PARAMETERS\"/>\r\n      <option name=\"PARAMETERS\"/>\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\"/>\r\n      <option name=\"ENV_VARIABLES\"/>\r\n      <option name=\"PASS_PARENT_ENVS\" value=\"true\"/>\r\n      <option name=\"TEST_SEARCH_SCOPE\">\r\n        <value defaultName=\"moduleWithDependencies\"/>\r\n      </option>\r\n      <envs/>\r\n      <method>\r\n        <option name=\"BuildArtifacts\" enabled=\"false\"/>\r\n        <option name=\"Make\" enabled=\"true\"/>\r\n      </method>\r\n    </configuration>\r\n    <list size=\"0\"/>\r\n    <configuration name=\"&lt;template&gt;\" type=\"WebApp\" default=\"true\" selected=\"false\">\r\n      <Host>localhost</Host>\r\n      <Port>5050</Port>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"ShelveChangesManager\" show_recycled=\"false\"/>\r\n  <component name=\"SvnConfiguration\" maxAnnotateRevisions=\"500\">\r\n    <option name=\"USER\" value=\"\"/>\r\n    <option name=\"PASSWORD\" value=\"\"/>\r\n    <option name=\"LAST_MERGED_REVISION\"/>\r\n    <option name=\"UPDATE_RUN_STATUS\" value=\"false\"/>\r\n    <option name=\"MERGE_DRY_RUN\" value=\"false\"/>\r\n    <option name=\"MERGE_DIFF_USE_ANCESTRY\" value=\"true\"/>\r\n    <option name=\"UPDATE_LOCK_ON_DEMAND\" value=\"false\"/>\r\n    <option name=\"IGNORE_SPACES_IN_MERGE\" value=\"false\"/>\r\n    <option name=\"DETECT_NESTED_COPIES\" value=\"true\"/>\r\n    <option name=\"IGNORE_SPACES_IN_ANNOTATE\" value=\"true\"/>\r\n    <option name=\"SHOW_MERGE_SOURCES_IN_ANNOTATE\" value=\"true\"/>\r\n    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\"/>\r\n    <servers/>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT\" value=\"true\"/>\r\n    <option name=\"CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT\" value=\"true\"/>\r\n    <option name=\"PERFORM_UPDATE_IN_BACKGROUND\" value=\"true\"/>\r\n    <option name=\"PERFORM_COMMIT_IN_BACKGROUND\" value=\"true\"/>\r\n    <option name=\"PERFORM_EDIT_IN_BACKGROUND\" value=\"true\"/>\r\n    <option name=\"PERFORM_CHECKOUT_IN_BACKGROUND\" value=\"true\"/>\r\n    <option name=\"PERFORM_ADD_REMOVE_IN_BACKGROUND\" value=\"true\"/>\r\n    <option name=\"PERFORM_ROLLBACK_IN_BACKGROUND\" value=\"false\"/>\r\n    <option name=\"CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND\" value=\"false\"/>\r\n    <option name=\"ENABLE_BACKGROUND_PROCESSES\" value=\"false\"/>\r\n    <option name=\"CHANGED_ON_SERVER_INTERVAL\" value=\"60\"/>\r\n    <option name=\"FORCE_NON_EMPTY_COMMENT\" value=\"false\"/>\r\n    <option name=\"LAST_COMMIT_MESSAGE\"/>\r\n    <option name=\"MAKE_NEW_CHANGELIST_ACTIVE\" value=\"true\"/>\r\n    <option name=\"OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT\" value=\"false\"/>\r\n    <option name=\"CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT\" value=\"false\"/>\r\n    <option name=\"REFORMAT_BEFORE_PROJECT_COMMIT\" value=\"false\"/>\r\n    <option name=\"REFORMAT_BEFORE_FILE_COMMIT\" value=\"false\"/>\r\n    <option name=\"FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION\" value=\"0.8\"/>\r\n    <option name=\"FILE_HISTORY_DIALOG_SPLITTER_PROPORTION\" value=\"0.5\"/>\r\n    <option name=\"ACTIVE_VCS_NAME\"/>\r\n    <option name=\"UPDATE_GROUP_BY_PACKAGES\" value=\"false\"/>\r\n    <option name=\"UPDATE_GROUP_BY_CHANGELIST\" value=\"false\"/>\r\n    <option name=\"SHOW_FILE_HISTORY_AS_TREE\" value=\"false\"/>\r\n    <option name=\"FILE_HISTORY_SPLITTER_PROPORTION\" value=\"0.6\"/>\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager/>\r\n  </component>\r\n</project>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle-8.6.iws b/gradle-8.6.iws
+--- a/gradle-8.6.iws	
++++ b/gradle-8.6.iws	
+@@ -1,207 +1,185 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <option name="TRACKING_ENABLED" value="true"/>
+-    <option name="SHOW_DIALOG" value="false"/>
+-    <option name="HIGHLIGHT_CONFLICTS" value="true"/>
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false"/>
+-    <option name="LAST_RESOLUTION" value="IGNORE"/>
++    <list default="true" id="7f7d98e5-29d3-4063-8ae1-6e654c79ac06" name="Changes" comment="">
++      <change beforePath="$PROJECT_DIR$/gradle-8.6.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/gradle-8.6.ipr" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/gradle-8.6.iws" beforeDir="false" afterPath="$PROJECT_DIR$/gradle-8.6.iws" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
+-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false"/>
+   <component name="CreatePatchCommitExecutor">
+-    <option name="PATCH_PATH" value=""/>
+-    <option name="REVERSE_PATCH" value="false"/>
+-  </component>
+-  <component name="DaemonCodeAnalyzer">
+-    <disable_hints/>
++    <option name="PATCH_PATH" value="" />
++    <option name="REVERSE_PATCH" value="false" />
+   </component>
+   <component name="DebuggerManager">
+-    <breakpoint_any>
++    <breakpoint_any converted="true">
+       <breakpoint>
+-        <option name="NOTIFY_CAUGHT" value="true"/>
+-        <option name="NOTIFY_UNCAUGHT" value="true"/>
+-        <option name="ENABLED" value="false"/>
+-        <option name="LOG_ENABLED" value="false"/>
+-        <option name="LOG_EXPRESSION_ENABLED" value="false"/>
+-        <option name="SUSPEND_POLICY" value="SuspendAll"/>
+-        <option name="COUNT_FILTER_ENABLED" value="false"/>
+-        <option name="COUNT_FILTER" value="0"/>
+-        <option name="CONDITION_ENABLED" value="false"/>
+-        <option name="CLASS_FILTERS_ENABLED" value="false"/>
+-        <option name="INSTANCE_FILTERS_ENABLED" value="false"/>
+-        <option name="CONDITION" value=""/>
+-        <option name="LOG_MESSAGE" value=""/>
++        <option name="NOTIFY_CAUGHT" value="true" />
++        <option name="NOTIFY_UNCAUGHT" value="true" />
++        <option name="ENABLED" value="false" />
++        <option name="LOG_ENABLED" value="false" />
++        <option name="LOG_EXPRESSION_ENABLED" value="false" />
++        <option name="SUSPEND_POLICY" value="SuspendAll" />
++        <option name="COUNT_FILTER_ENABLED" value="false" />
++        <option name="COUNT_FILTER" value="0" />
++        <option name="CONDITION_ENABLED" value="false" />
++        <option name="CLASS_FILTERS_ENABLED" value="false" />
++        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
++        <option name="CONDITION" value="" />
++        <option name="LOG_MESSAGE" value="" />
+       </breakpoint>
+       <breakpoint>
+-        <option name="NOTIFY_CAUGHT" value="true"/>
+-        <option name="NOTIFY_UNCAUGHT" value="true"/>
+-        <option name="ENABLED" value="false"/>
+-        <option name="LOG_ENABLED" value="false"/>
+-        <option name="LOG_EXPRESSION_ENABLED" value="false"/>
+-        <option name="SUSPEND_POLICY" value="SuspendAll"/>
+-        <option name="COUNT_FILTER_ENABLED" value="false"/>
+-        <option name="COUNT_FILTER" value="0"/>
+-        <option name="CONDITION_ENABLED" value="false"/>
+-        <option name="CLASS_FILTERS_ENABLED" value="false"/>
+-        <option name="INSTANCE_FILTERS_ENABLED" value="false"/>
+-        <option name="CONDITION" value=""/>
+-        <option name="LOG_MESSAGE" value=""/>
++        <option name="NOTIFY_CAUGHT" value="true" />
++        <option name="NOTIFY_UNCAUGHT" value="true" />
++        <option name="ENABLED" value="false" />
++        <option name="LOG_ENABLED" value="false" />
++        <option name="LOG_EXPRESSION_ENABLED" value="false" />
++        <option name="SUSPEND_POLICY" value="SuspendAll" />
++        <option name="COUNT_FILTER_ENABLED" value="false" />
++        <option name="COUNT_FILTER" value="0" />
++        <option name="CONDITION_ENABLED" value="false" />
++        <option name="CLASS_FILTERS_ENABLED" value="false" />
++        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
++        <option name="CONDITION" value="" />
++        <option name="LOG_MESSAGE" value="" />
+       </breakpoint>
+     </breakpoint_any>
+-    <breakpoint_rules/>
+-    <ui_properties/>
++    <breakpoint_rules converted="true" />
++    <ui_properties converted="true" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
+   </component>
+   <component name="ModuleEditorState">
+-    <option name="LAST_EDITED_MODULE_NAME"/>
+-    <option name="LAST_EDITED_TAB_NAME"/>
++    <option name="LAST_EDITED_MODULE_NAME" />
++    <option name="LAST_EDITED_TAB_NAME" />
+   </component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 3
++}]]></component>
++  <component name="ProjectId" id="2gFtVc19REClH2XHt2XNNEConpw" />
+   <component name="ProjectInspectionProfilesVisibleTreeState">
+     <entry key="Project Default">
+-      <profile-state/>
++      <profile-state />
+     </entry>
+   </component>
+-  <component name="ProjectLevelVcsManager">
+-    <OptionsSetting value="true" id="Add"/>
+-    <OptionsSetting value="true" id="Remove"/>
+-    <OptionsSetting value="true" id="Checkout"/>
+-    <OptionsSetting value="true" id="Update"/>
+-    <OptionsSetting value="true" id="Status"/>
+-    <OptionsSetting value="true" id="Edit"/>
+-    <ConfirmationsSetting value="0" id="Add"/>
+-    <ConfirmationsSetting value="0" id="Remove"/>
+-  </component>
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectReloadState">
+-    <option name="STATE" value="0"/>
++    <option name="STATE" value="0" />
+   </component>
+-  <component name="PropertiesComponent">
+-    <property name="GoToFile.includeJavaFiles" value="false"/>
+-    <property name="GoToClass.toSaveIncludeLibraries" value="false"/>
+-    <property name="MemberChooser.sorted" value="false"/>
+-    <property name="MemberChooser.showClasses" value="true"/>
+-    <property name="GoToClass.includeLibraries" value="false"/>
+-    <property name="MemberChooser.copyJavadoc" value="false"/>
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
+   </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Gradle.C:/Users/gobed/IdeaProjects/HW-1/build.gradle.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "git-widget-placeholder": "main",
++    "kotlin-language-version-configured": "true",
++    "nodejs_package_manager_path": "npm",
++    "project.structure.last.edited": "Modules",
++    "project.structure.proportion": "0.0",
++    "project.structure.side.proportion": "0.2",
++    "vue.rearranger.settings.migration": "true"
++  }
++}]]></component>
+   <component name="RunManager">
+-    <configuration default="true" type="Remote" factoryName="Remote">
+-      <option name="USE_SOCKET_TRANSPORT" value="true"/>
+-      <option name="SERVER_MODE" value="false"/>
+-      <option name="SHMEM_ADDRESS" value="javadebug"/>
+-      <option name="HOST" value="localhost"/>
+-      <option name="PORT" value="5005"/>
+-      <method>
+-        <option name="BuildArtifacts" enabled="false"/>
+-      </method>
+-    </configuration>
+     <configuration default="true" type="Applet" factoryName="Applet">
+-      <module name=""/>
+-      <option name="MAIN_CLASS_NAME"/>
+-      <option name="HTML_FILE_NAME"/>
+-      <option name="HTML_USED" value="false"/>
+-      <option name="WIDTH" value="400"/>
+-      <option name="HEIGHT" value="300"/>
+-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy"/>
+-      <option name="VM_PARAMETERS"/>
+-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false"/>
+-      <option name="ALTERNATIVE_JRE_PATH"/>
++      <module name="" />
++      <option name="MAIN_CLASS_NAME" />
++      <option name="HTML_FILE_NAME" />
++      <option name="HTML_USED" value="false" />
++      <option name="WIDTH" value="400" />
++      <option name="HEIGHT" value="300" />
++      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
++      <option name="VM_PARAMETERS" />
++      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
++      <option name="ALTERNATIVE_JRE_PATH" />
+       <method>
+-        <option name="BuildArtifacts" enabled="false"/>
+-        <option name="Make" enabled="true"/>
++        <option name="BuildArtifacts" enabled="false" />
++        <option name="Make" enabled="true" />
+       </method>
++    </configuration>
++    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
++      <Host>localhost</Host>
++      <Port>5050</Port>
+     </configuration>
+     <configuration default="true" type="Application" factoryName="Application">
+-      <extension name="coverage" enabled="false" merge="false"/>
+-      <option name="MAIN_CLASS_NAME"/>
+-      <option name="VM_PARAMETERS"/>
+-      <option name="PROGRAM_PARAMETERS"/>
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$"/>
+-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false"/>
+-      <option name="ALTERNATIVE_JRE_PATH"/>
+-      <option name="ENABLE_SWING_INSPECTOR" value="false"/>
+-      <option name="ENV_VARIABLES"/>
+-      <option name="PASS_PARENT_ENVS" value="true"/>
+-      <module name=""/>
+-      <envs/>
+-      <method>
+-        <option name="BuildArtifacts" enabled="false"/>
+-        <option name="Make" enabled="true"/>
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
++      <method v="2">
++        <option name="BuildArtifacts" enabled="false" />
++        <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <configuration default="true" type="JUnit" factoryName="JUnit">
+-      <extension name="coverage" enabled="false" merge="false"/>
+-      <module name=""/>
+-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false"/>
+-      <option name="ALTERNATIVE_JRE_PATH"/>
+-      <option name="PACKAGE_NAME"/>
+-      <option name="MAIN_CLASS_NAME"/>
+-      <option name="METHOD_NAME"/>
+-      <option name="TEST_OBJECT" value="class"/>
+-      <option name="VM_PARAMETERS"/>
+-      <option name="PARAMETERS"/>
+-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$"/>
+-      <option name="ENV_VARIABLES"/>
+-      <option name="PASS_PARENT_ENVS" value="true"/>
++      <option name="TEST_OBJECT" value="class" />
++      <option name="VM_PARAMETERS" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+       <option name="TEST_SEARCH_SCOPE">
+-        <value defaultName="moduleWithDependencies"/>
++        <value defaultName="moduleWithDependencies" />
+       </option>
+-      <envs/>
+-      <method>
+-        <option name="BuildArtifacts" enabled="false"/>
+-        <option name="Make" enabled="true"/>
++      <method v="2">
++        <option name="BuildArtifacts" enabled="false" />
++        <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <list size="0"/>
+-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+-      <Host>localhost</Host>
+-      <Port>5050</Port>
++    <configuration default="true" type="Remote">
++      <option name="USE_SOCKET_TRANSPORT" value="true" />
++      <option name="SERVER_MODE" value="false" />
++      <option name="SHMEM_ADDRESS" value="javadebug" />
++      <option name="HOST" value="localhost" />
++      <option name="PORT" value="5005" />
++      <option name="AUTO_RESTART" value="false" />
++      <method v="2">
++        <option name="BuildArtifacts" enabled="false" />
++      </method>
+     </configuration>
+   </component>
+-  <component name="ShelveChangesManager" show_recycled="false"/>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
++      </set>
++    </attachedChunks>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration" maxAnnotateRevisions="500">
+-    <option name="USER" value=""/>
+-    <option name="PASSWORD" value=""/>
+-    <option name="LAST_MERGED_REVISION"/>
+-    <option name="UPDATE_RUN_STATUS" value="false"/>
+-    <option name="MERGE_DRY_RUN" value="false"/>
+-    <option name="MERGE_DIFF_USE_ANCESTRY" value="true"/>
+-    <option name="UPDATE_LOCK_ON_DEMAND" value="false"/>
+-    <option name="IGNORE_SPACES_IN_MERGE" value="false"/>
+-    <option name="DETECT_NESTED_COPIES" value="true"/>
+-    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true"/>
+-    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true"/>
++    <option name="USER" value="" />
++    <option name="PASSWORD" value="" />
++    <option name="LAST_MERGED_REVISION" />
++    <option name="UPDATE_RUN_STATUS" value="false" />
++    <option name="MERGE_DRY_RUN" value="false" />
++    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
++    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
++    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
++    <option name="DETECT_NESTED_COPIES" value="true" />
++    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
++    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+   </component>
+   <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task"/>
+-    <servers/>
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="7f7d98e5-29d3-4063-8ae1-6e654c79ac06" name="Changes" comment="" />
++      <created>1715305180173</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1715305180173</updated>
++      <workItem from="1715305183327" duration="244000" />
++    </task>
++    <servers />
+   </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
+   <component name="VcsManagerConfiguration">
+-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true"/>
+-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true"/>
+-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true"/>
+-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true"/>
+-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true"/>
+-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true"/>
+-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true"/>
+-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false"/>
+-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false"/>
+-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false"/>
+-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60"/>
+-    <option name="FORCE_NON_EMPTY_COMMENT" value="false"/>
+-    <option name="LAST_COMMIT_MESSAGE"/>
+-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true"/>
+-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false"/>
+-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false"/>
+-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false"/>
+-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false"/>
+-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8"/>
+-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5"/>
+-    <option name="ACTIVE_VCS_NAME"/>
+-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false"/>
+-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false"/>
+-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false"/>
+-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6"/>
++    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+   </component>
+-  <component name="XDebuggerManager">
+-    <breakpoint-manager/>
+-  </component>
+-</project>
++</project>
+\ No newline at end of file

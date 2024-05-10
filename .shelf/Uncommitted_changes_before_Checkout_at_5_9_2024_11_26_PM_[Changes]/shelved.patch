@@ -1,0 +1,553 @@
+Index: gradle/wrapper/gradle-wrapper.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#Thu May 09 15:24:07 EDT 2024\r\ndistributionBase=GRADLE_USER_HOME\r\ndistributionPath=wrapper/dists\r\ndistributionUrl=https\\://services.gradle.org/distributions/gradle-8.5-bin.zip\r\nzipStoreBase=GRADLE_USER_HOME\r\nzipStorePath=wrapper/dists\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/gradle/wrapper/gradle-wrapper.properties b/gradle/wrapper/gradle-wrapper.properties
+--- a/gradle/wrapper/gradle-wrapper.properties	
++++ b/gradle/wrapper/gradle-wrapper.properties	
+@@ -1,6 +1,7 @@
+-#Thu May 09 15:24:07 EDT 2024
+ distributionBase=GRADLE_USER_HOME
+ distributionPath=wrapper/dists
+ distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-bin.zip
++networkTimeout=10000
++validateDistributionUrl=true
+ zipStoreBase=GRADLE_USER_HOME
+ zipStorePath=wrapper/dists
+Index: gradlew.bat
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@rem\r\n@rem Copyright 2015 the original author or authors.\r\n@rem\r\n@rem Licensed under the Apache License, Version 2.0 (the \"License\");\r\n@rem you may not use this file except in compliance with the License.\r\n@rem You may obtain a copy of the License at\r\n@rem\r\n@rem      https://www.apache.org/licenses/LICENSE-2.0\r\n@rem\r\n@rem Unless required by applicable law or agreed to in writing, software\r\n@rem distributed under the License is distributed on an \"AS IS\" BASIS,\r\n@rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\r\n@rem See the License for the specific language governing permissions and\r\n@rem limitations under the License.\r\n@rem\r\n\r\n@if \"%DEBUG%\"==\"\" @echo off\r\n@rem ##########################################################################\r\n@rem\r\n@rem  Gradle startup script for Windows\r\n@rem\r\n@rem ##########################################################################\r\n\r\n@rem Set local scope for the variables with windows NT shell\r\nif \"%OS%\"==\"Windows_NT\" setlocal\r\n\r\nset DIRNAME=%~dp0\r\nif \"%DIRNAME%\"==\"\" set DIRNAME=.\r\n@rem This is normally unused\r\nset APP_BASE_NAME=%~n0\r\nset APP_HOME=%DIRNAME%\r\n\r\n@rem Resolve any \".\" and \"..\" in APP_HOME to make it shorter.\r\nfor %%i in (\"%APP_HOME%\") do set APP_HOME=%%~fi\r\n\r\n@rem Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.\r\nset DEFAULT_JVM_OPTS=\"-Xmx64m\" \"-Xms64m\"\r\n\r\n@rem Find java.exe\r\nif defined JAVA_HOME goto findJavaFromJavaHome\r\n\r\nset JAVA_EXE=java.exe\r\n%JAVA_EXE% -version >NUL 2>&1\r\nif %ERRORLEVEL% equ 0 goto execute\r\n\r\necho. 1>&2\r\necho ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2\r\necho. 1>&2\r\necho Please set the JAVA_HOME variable in your environment to match the 1>&2\r\necho location of your Java installation. 1>&2\r\n\r\ngoto fail\r\n\r\n:findJavaFromJavaHome\r\nset JAVA_HOME=%JAVA_HOME:\"=%\r\nset JAVA_EXE=%JAVA_HOME%/bin/java.exe\r\n\r\nif exist \"%JAVA_EXE%\" goto execute\r\n\r\necho. 1>&2\r\necho ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME% 1>&2\r\necho. 1>&2\r\necho Please set the JAVA_HOME variable in your environment to match the 1>&2\r\necho location of your Java installation. 1>&2\r\n\r\ngoto fail\r\n\r\n:execute\r\n@rem Setup the command line\r\n\r\nset CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar\r\n\r\n\r\n@rem Execute Gradle\r\n\"%JAVA_EXE%\" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% \"-Dorg.gradle.appname=%APP_BASE_NAME%\" -classpath \"%CLASSPATH%\" org.gradle.wrapper.GradleWrapperMain %*\r\n\r\n:end\r\n@rem End local scope for the variables with windows NT shell\r\nif %ERRORLEVEL% equ 0 goto mainEnd\r\n\r\n:fail\r\nrem Set variable GRADLE_EXIT_CONSOLE if you need the _script_ return code instead of\r\nrem the _cmd.exe /c_ return code!\r\nset EXIT_CODE=%ERRORLEVEL%\r\nif %EXIT_CODE% equ 0 set EXIT_CODE=1\r\nif not \"\"==\"%GRADLE_EXIT_CONSOLE%\" exit %EXIT_CODE%\r\nexit /b %EXIT_CODE%\r\n\r\n:mainEnd\r\nif \"%OS%\"==\"Windows_NT\" endlocal\r\n\r\n:omega\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradlew.bat b/gradlew.bat
+--- a/gradlew.bat	
++++ b/gradlew.bat	
+@@ -43,11 +43,11 @@
+ %JAVA_EXE% -version >NUL 2>&1
+ if %ERRORLEVEL% equ 0 goto execute
+ 
+-echo. 1>&2
+-echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH. 1>&2
+-echo. 1>&2
+-echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+-echo location of your Java installation. 1>&2
++echo.
++echo ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
+ 
+ goto fail
+ 
+@@ -57,11 +57,11 @@
+ 
+ if exist "%JAVA_EXE%" goto execute
+ 
+-echo. 1>&2
+-echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME% 1>&2
+-echo. 1>&2
+-echo Please set the JAVA_HOME variable in your environment to match the 1>&2
+-echo location of your Java installation. 1>&2
++echo.
++echo ERROR: JAVA_HOME is set to an invalid directory: %JAVA_HOME%
++echo.
++echo Please set the JAVA_HOME variable in your environment to match the
++echo location of your Java installation.
+ 
+ goto fail
+ 
+Index: gradle-8.6.ipr
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"CompilerConfiguration\">\r\n    <resourceExtensions>\r\n      <entry name=\".+\\.(properties|xml|html|dtd|tld)\" />\r\n      <entry name=\".+\\.(gif|png|jpeg|jpg)\" />\r\n    </resourceExtensions>\r\n    <wildcardResourcePatterns>\r\n      <entry name=\"!?*.class\" />\r\n      <entry name=\"!?*.scala\" />\r\n      <entry name=\"!?*.groovy\" />\r\n      <entry name=\"!?*.java\" />\r\n    </wildcardResourcePatterns>\r\n    <bytecodeTargetLevel target=\"22\" />\r\n  </component>\r\n  <component name=\"CopyrightManager\" default=\"\">\r\n    <module2copyright />\r\n  </component>\r\n  <component name=\"DependencyValidationManager\">\r\n    <option name=\"SKIP_IMPORT_STATEMENTS\" value=\"false\" />\r\n  </component>\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"FrameworkDetectionExcludesConfiguration\">\r\n    <file type=\"web\" url=\"file://$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n          </set>\r\n        </option>\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n  <component name=\"GradleUISettings\">\r\n    <setting name=\"root\" />\r\n  </component>\r\n  <component name=\"GradleUISettings2\">\r\n    <setting name=\"root\" />\r\n  </component>\r\n  <component name=\"IdProvider\" IDEtalkID=\"11DA1DB66DD62DDA1ED602B7079FE97C\" />\r\n  <component name=\"InspectionProjectProfileManager\">\r\n    <profile version=\"1.0\">\r\n      <option name=\"myName\" value=\"Project Default\" />\r\n    </profile>\r\n    <version value=\"1.0\" />\r\n  </component>\r\n  <component name=\"JavadocGenerationManager\">\r\n    <option name=\"OUTPUT_DIRECTORY\" />\r\n    <option name=\"OPTION_SCOPE\" value=\"protected\" />\r\n    <option name=\"OPTION_HIERARCHY\" value=\"true\" />\r\n    <option name=\"OPTION_NAVIGATOR\" value=\"true\" />\r\n    <option name=\"OPTION_INDEX\" value=\"true\" />\r\n    <option name=\"OPTION_SEPARATE_INDEX\" value=\"true\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_USE\" value=\"false\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_AUTHOR\" value=\"false\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_VERSION\" value=\"false\" />\r\n    <option name=\"OPTION_DOCUMENT_TAG_DEPRECATED\" value=\"true\" />\r\n    <option name=\"OPTION_DEPRECATED_LIST\" value=\"true\" />\r\n    <option name=\"OTHER_OPTIONS\" value=\"\" />\r\n    <option name=\"HEAP_SIZE\" />\r\n    <option name=\"LOCALE\" />\r\n    <option name=\"OPEN_IN_BROWSER\" value=\"true\" />\r\n  </component>\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/gradle-8.6.iml\" filepath=\"$PROJECT_DIR$/gradle-8.6.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/gradle-8.6.main.iml\" filepath=\"$PROJECT_DIR$/gradle-8.6.main.iml\" />\r\n      <module fileurl=\"file://$PROJECT_DIR$/gradle-8.6.test.iml\" filepath=\"$PROJECT_DIR$/gradle-8.6.test.iml\" />\r\n    </modules>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_22\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n  <component name=\"RemoteRepositoriesConfiguration\">\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"central\" />\r\n      <option name=\"name\" value=\"Maven Central repository\" />\r\n      <option name=\"url\" value=\"https://repo1.maven.org/maven2\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"jboss.community\" />\r\n      <option name=\"name\" value=\"JBoss Community repository\" />\r\n      <option name=\"url\" value=\"https://repository.jboss.org/nexus/content/repositories/public/\" />\r\n    </remote-repository>\r\n    <remote-repository>\r\n      <option name=\"id\" value=\"MavenRepo\" />\r\n      <option name=\"name\" value=\"MavenRepo\" />\r\n      <option name=\"url\" value=\"https://repo.maven.apache.org/maven2/\" />\r\n    </remote-repository>\r\n  </component>\r\n  <component name=\"SvnBranchConfigurationManager\">\r\n    <option name=\"mySupportsUserInfoFilter\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"\" vcs=\"Git\" />\r\n  </component>\r\n  <component name=\"libraryTable\">\r\n    <library name=\"Gradle: com.google.android:annotations:4.1.1.4\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.android\" artifactId=\"annotations\" version=\"4.1.1.4\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/a1678ba907bf92691d879fef34e1a187038f9259/annotations-4.1.1.4.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android/annotations/4.1.1.4/deb22daeb37bdcbc14230aeaeddce38320d6d0f9/annotations-4.1.1.4-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.api.grpc:proto-google-common-protos:2.22.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.api.grpc\" artifactId=\"proto-google-common-protos\" version=\"2.22.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.22.0/627126f6a05085dab0caba68dcdad118512975ef/proto-google-common-protos-2.22.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.api.grpc/proto-google-common-protos/2.22.0/da6840b83baa3efe0844706ab7f9c55cc45f6c53/proto-google-common-protos-2.22.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.code.findbugs:jsr305:3.0.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.code.findbugs\" artifactId=\"jsr305\" version=\"3.0.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/25ea2e8b0c338a877313bd4672d3fe056ea78f0d/jsr305-3.0.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.2/b19b5927c2c25b6c70f093767041e641ae0b1b35/jsr305-3.0.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.code.gson:gson:2.10.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.code.gson\" artifactId=\"gson\" version=\"2.10.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10.1/b3add478d4382b78ea20b1671390a858002feb6c/gson-2.10.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10.1/982a90132e942f302e6fe79d6e78c4bc2e998569/gson-2.10.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.errorprone:error_prone_annotations:2.20.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.errorprone\" artifactId=\"error_prone_annotations\" version=\"2.20.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.20.0/bd4d8f4a02886a26b60c76048547a453691fcec3/error_prone_annotations-2.20.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/error_prone_annotations/2.20.0/239e276cf68d4efea905bde8d6b8b8cc79d61123/error_prone_annotations-2.20.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.guava:failureaccess:1.0.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.guava\" artifactId=\"failureaccess\" version=\"1.0.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1dcf1de382a0bf95a3d8b0849546c88bac1292c9/failureaccess-1.0.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/failureaccess/1.0.1/1d064e61aad6c51cc77f9b59dc2cccc78e792f5a/failureaccess-1.0.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.guava:guava:32.0.1-android\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.guava\" artifactId=\"guava\" version=\"32.0.1-android\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-android/d3fe54a75aeaca33fc562a2a9c1dc181e54cc5e9/guava-32.0.1-android.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-android/887ae16f4304db1e0dc84f45f8dcc0071002234/guava-32.0.1-android-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.guava:guava:32.0.1-jre\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.guava\" artifactId=\"guava\" version=\"32.0.1-jre\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-jre/6e5d51a72d142f2d40a57dfb897188b36a95b489/guava-32.0.1-jre.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/32.0.1-jre/f491b792f07e0a5dc5a6695ea2f3632263b317e4/guava-32.0.1-jre-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.guava\" artifactId=\"listenablefuture\" version=\"9999.0-empty-to-avoid-conflict-with-guava\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/b421526c5f297295adef1c886e5246c39d4ac629/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES />\r\n    </library>\r\n    <library name=\"Gradle: com.google.j2objc:j2objc-annotations:2.8\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.j2objc\" artifactId=\"j2objc-annotations\" version=\"2.8\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/c85270e307e7b822f1086b93689124b89768e273/j2objc-annotations-2.8.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.j2objc/j2objc-annotations/2.8/74fb66e276fc42784d884d51f841e35232bc90de/j2objc-annotations-2.8-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.protobuf:protobuf-java-util:3.24.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.protobuf\" artifactId=\"protobuf-java-util\" version=\"3.24.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.24.0/3008d814776133a4312e4ba25eb9e28ea56990e8/protobuf-java-util-3.24.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java-util/3.24.0/bf874545de957b2ef9d88b39773ac57502e42dd/protobuf-java-util-3.24.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: com.google.protobuf:protobuf-java:3.24.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"com.google.protobuf\" artifactId=\"protobuf-java\" version=\"3.24.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.24.0/850a0efbee73911b2c30fa2238a549244524d31e/protobuf-java-3.24.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/3.24.0/aada4fdc16275d82c1186b52495462ba9caa17f4/protobuf-java-3.24.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-api:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-api\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.59.1/fb57dd0097c792e97afb186f09c47c8c2b9598cc/grpc-api-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-api/1.59.1/49ce37f75a2fff170c3a088580ca309fee66a3f3/grpc-api-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-context:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-context\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-context/1.59.1/ebbb99b123e4804e7a28aed0c00cdba1ad244b16/grpc-context-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-context/1.59.1/f7daa86aaaeb6ad9ebe5f98d3b9ff11b25309b5a/grpc-context-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-core:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-core\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-core/1.59.1/88fef1ad68a4571ef443e9c0ac6355c0bd89647e/grpc-core-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-core/1.59.1/47d150782547692baaf7c756fdec2ab725eca8b/grpc-core-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-inprocess:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-inprocess\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-inprocess/1.59.1/33f031b64a114ba496f74431cc5c3ff4b7174c5b/grpc-inprocess-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-inprocess/1.59.1/5f09ce7ea2a9cc81382b8ff6a204c85d9df83fe7/grpc-inprocess-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-netty-shaded:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-netty-shaded\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-netty-shaded/1.59.1/f21e58260856ccef71f1ab9315bfa9fd195e848e/grpc-netty-shaded-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-netty-shaded/1.59.1/f7daa86aaaeb6ad9ebe5f98d3b9ff11b25309b5a/grpc-netty-shaded-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-protobuf-lite:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-protobuf-lite\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf-lite/1.59.1/d08f76893dd446d66f8bc7025237150443a38291/grpc-protobuf-lite-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf-lite/1.59.1/c80bf81387ac93594277415910ebd7cc23a40709/grpc-protobuf-lite-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-protobuf:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-protobuf\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf/1.59.1/c5cf8c7f94eb83bca069889f25a0c4112d715365/grpc-protobuf-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-protobuf/1.59.1/a47190b2fb17391c5abaae65beeaddd6fb067272/grpc-protobuf-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-services:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-services\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-services/1.59.1/c40b642d33c9ada8451ca5701863ce8d6214e92/grpc-services-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-services/1.59.1/1b763b7b863705e18188461e1ac4d4ef3c87175d/grpc-services-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-stub:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-stub\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-stub/1.59.1/7d29780f48086e00ae371751d2d453a837540e2f/grpc-stub-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-stub/1.59.1/98cb0fff6c30ccdd9b4cb7ff64f02f1310878496/grpc-stub-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-testing:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-testing\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-testing/1.59.1/29595864b59f41b73bc19d737bff4c5aa283b137/grpc-testing-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-testing/1.59.1/41f8d148bb25e96764299f848d78c9d730f81e7f/grpc-testing-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.grpc:grpc-util:1.59.1\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.grpc\" artifactId=\"grpc-util\" version=\"1.59.1\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-util/1.59.1/1ab8cc9de5a85a97312903102d82f90fe2e18083/grpc-util-1.59.1.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.grpc/grpc-util/1.59.1/dbe8e83d5441c7fe922dd5f0cc3e361660443866/grpc-util-1.59.1-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: io.perfmark:perfmark-api:0.26.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"io.perfmark\" artifactId=\"perfmark-api\" version=\"0.26.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/ef65452adaf20bf7d12ef55913aba24037b82738/perfmark-api-0.26.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.perfmark/perfmark-api/0.26.0/7009fcae4696dc0088d9e3d21933380f845e05be/perfmark-api-0.26.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: junit:junit:4.13.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"junit\" artifactId=\"junit\" version=\"4.13.2\" />\r\n      <ANNOTATIONS>\r\n        <root url=\"jar://$MAVEN_REPOSITORY$/org/jetbrains/externalAnnotations/junit/junit/4.12-an1/junit-4.12-an1-annotations.zip!/\" />\r\n      </ANNOTATIONS>\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/33987872a811fe4d4001ed494b07854822257f42/junit-4.13.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: net.bytebuddy:byte-buddy-agent:1.14.11\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"net.bytebuddy\" artifactId=\"byte-buddy-agent\" version=\"1.14.11\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.11/f9cb566608fbac6bc7bf54901a7aa11543a989ee/byte-buddy-agent-1.14.11.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy-agent/1.14.11/24b0a9ff16c37f036011cd1bfb67075df87c96b7/byte-buddy-agent-1.14.11-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: net.bytebuddy:byte-buddy:1.14.11\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"net.bytebuddy\" artifactId=\"byte-buddy\" version=\"1.14.11\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.11/725602eb7c8c56b51b9c21f273f9df5c909d9e7d/byte-buddy-1.14.11.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.14.11/67010508a95b30eff7fc6f8ffe16b6d03fc57b99/byte-buddy-1.14.11-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.apache.tomcat:annotations-api:6.0.53\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.apache.tomcat\" artifactId=\"annotations-api\" version=\"6.0.53\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.tomcat/annotations-api/6.0.53/94cfa8a6ebc6b36e966bff433d4eeebf933f3f41/annotations-api-6.0.53.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES />\r\n    </library>\r\n    <library name=\"Gradle: org.apiguardian:apiguardian-api:1.1.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.apiguardian\" artifactId=\"apiguardian-api\" version=\"1.1.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/e0787a997746ac32639e0bf3cb27af8dce8a3428/apiguardian-api-1.1.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.checkerframework:checker-qual:3.33.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.checkerframework\" artifactId=\"checker-qual\" version=\"3.33.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/de2b60b62da487644fc11f734e73c8b0b431238f/checker-qual-3.33.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.checkerframework/checker-qual/3.33.0/ee4ecf6c55e3f2b05b839aa05c70f1298437ebe9/checker-qual-3.33.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.23\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.codehaus.mojo\" artifactId=\"animal-sniffer-annotations\" version=\"1.23\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/3c0daebd5f0e1ce72cc50c818321ac957aeb5d70/animal-sniffer-annotations-1.23.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.mojo/animal-sniffer-annotations/1.23/d4026d5c3c5566247873b7f62ce8e487ddfc856/animal-sniffer-annotations-1.23-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.hamcrest:hamcrest-core:1.3\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.hamcrest\" artifactId=\"hamcrest-core\" version=\"1.3\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/1dc37250fbc78e23a65a67fbbaf71d2e9cbc3c0b/hamcrest-core-1.3-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.jupiter:junit-jupiter-api:5.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.jupiter\" artifactId=\"junit-jupiter-api\" version=\"5.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.2/4c21029217adf07e4c0d0c5e192b6bf610c94bdc/junit-jupiter-api-5.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.8.2/429d353563c5fb35a3d47076bedbf75161e976c2/junit-jupiter-api-5.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.jupiter:junit-jupiter-engine:5.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.jupiter\" artifactId=\"junit-jupiter-engine\" version=\"5.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.8.2/c598b4328d2f397194d11df3b1648d68d7d990e3/junit-jupiter-engine-5.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.8.2/ea87fe3d752e24397f71f347872e79a89c61a704/junit-jupiter-engine-5.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.jupiter:junit-jupiter-params:5.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.jupiter\" artifactId=\"junit-jupiter-params\" version=\"5.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.8.2/ddeafe92fc263f895bfb73ffeca7fd56e23c2cce/junit-jupiter-params-5.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.8.2/26d07692b618b8da29479febec7d55e18107ee48/junit-jupiter-params-5.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.jupiter:junit-jupiter:5.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.jupiter\" artifactId=\"junit-jupiter\" version=\"5.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.2/5a817b1e63f1217e5c586090c45e681281f097ad/junit-jupiter-5.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.8.2/5fd01c33132462aab3905cb74bd1097a713ab91a/junit-jupiter-5.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.platform:junit-platform-commons:1.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.platform\" artifactId=\"junit-platform-commons\" version=\"1.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.2/32c8b8617c1342376fd5af2053da6410d8866861/junit-platform-commons-1.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.8.2/386b61876dd33d0ef0381189d3c1db9455d99659/junit-platform-commons-1.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.junit.platform:junit-platform-engine:1.8.2\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.junit.platform\" artifactId=\"junit-platform-engine\" version=\"1.8.2\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.8.2/b737de09f19864bd136805c84df7999a142fec29/junit-platform-engine-1.8.2.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.8.2/ef25ff956479198a71a7d1b23e11f27fb09393b6/junit-platform-engine-1.8.2-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.mockito:mockito-core:5.10.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.mockito\" artifactId=\"mockito-core\" version=\"5.10.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.10.0/b3812fa2ee069f1d0b41c1c0155da79d0e1dcde0/mockito-core-5.10.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mockito/mockito-core/5.10.0/334414d1ab22e0dcf13314c11daa8c4975f81407/mockito-core-5.10.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.objenesis:objenesis:3.3\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.objenesis\" artifactId=\"objenesis\" version=\"3.3\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/1049c09f1de4331e8193e579448d0916d75b7631/objenesis-3.3.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/3.3/5fef34eeee6816b0ba2170755a8a9db7744990c3/objenesis-3.3-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n    <library name=\"Gradle: org.opentest4j:opentest4j:1.2.0\" type=\"java-imported\" external-system-id=\"GRADLE\">\r\n      <properties groupId=\"org.opentest4j\" artifactId=\"opentest4j\" version=\"1.2.0\" />\r\n      <CLASSES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar!/\" />\r\n      </CLASSES>\r\n      <JAVADOC />\r\n      <SOURCES>\r\n        <root url=\"jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/41d55b3c2254de9837b4ec8923cbd371b8a7eab5/opentest4j-1.2.0-sources.jar!/\" />\r\n      </SOURCES>\r\n    </library>\r\n  </component>\r\n  <component name=\"masterDetails\">\r\n    <states>\r\n      <state key=\"ArtifactsStructureConfigurable.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl />\r\n          </splitter-proportions>\r\n          <settings />\r\n        </UIState>\r\n      </state>\r\n      <state key=\"Copyright.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl />\r\n          </splitter-proportions>\r\n        </UIState>\r\n      </state>\r\n      <state key=\"ProjectJDKs.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl>\r\n              <option name=\"proportions\">\r\n                <list>\r\n                  <option value=\"0.2\" />\r\n                </list>\r\n              </option>\r\n            </SplitterProportionsDataImpl>\r\n          </splitter-proportions>\r\n          <last-edited>1.6</last-edited>\r\n        </UIState>\r\n      </state>\r\n      <state key=\"ScopeChooserConfigurable.UI\">\r\n        <UIState>\r\n          <splitter-proportions>\r\n            <SplitterProportionsDataImpl />\r\n          </splitter-proportions>\r\n          <settings />\r\n        </UIState>\r\n      </state>\r\n    </states>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle-8.6.ipr b/gradle-8.6.ipr
+--- a/gradle-8.6.ipr	
++++ b/gradle-8.6.ipr	
+@@ -11,7 +11,11 @@
+       <entry name="!?*.groovy" />
+       <entry name="!?*.java" />
+     </wildcardResourcePatterns>
+-    <bytecodeTargetLevel target="22" />
++    <bytecodeTargetLevel target="22">
++      <module name="gradle-8.6" target="19" />
++      <module name="HW-1.gradle-8.6.main" target="19" />
++      <module name="HW-1.gradle-8.6.test" target="19" />
++    </bytecodeTargetLevel>
+   </component>
+   <component name="CopyrightManager" default="">
+     <module2copyright />
+@@ -68,12 +72,14 @@
+   </component>
+   <component name="ProjectModuleManager">
+     <modules>
++      <module fileurl="file://$PROJECT_DIR$/HW-1.gradle-8.6.main.iml" filepath="$PROJECT_DIR$/HW-1.gradle-8.6.main.iml" />
++      <module fileurl="file://$PROJECT_DIR$/HW-1.gradle-8.6.test.iml" filepath="$PROJECT_DIR$/HW-1.gradle-8.6.test.iml" />
+       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.iml" filepath="$PROJECT_DIR$/gradle-8.6.iml" />
+       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.main.iml" filepath="$PROJECT_DIR$/gradle-8.6.main.iml" />
+       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.test.iml" filepath="$PROJECT_DIR$/gradle-8.6.test.iml" />
+     </modules>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/out" />
+   </component>
+   <component name="RemoteRepositoriesConfiguration">
+Index: HW-1.gradle-8.6.test.iml
+===================================================================
+diff --git a/HW-1.gradle-8.6.test.iml b/HW-1.gradle-8.6.test.iml
+new file mode 100644
+--- /dev/null	
++++ b/HW-1.gradle-8.6.test.iml	
+@@ -0,0 +1,66 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id="gradle-8.6:test" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <output-test url="file://$MODULE_DIR$/build/classes/java/test" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$/build/extracted-include-protos/test">
++      <sourceFolder url="file://$MODULE_DIR$/build/extracted-include-protos/test" isTestSource="true" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/extracted-protos/test">
++      <sourceFolder url="file://$MODULE_DIR$/build/extracted-protos/test" isTestSource="true" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/generated/source/proto/test/grpc">
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/proto/test/grpc" isTestSource="true" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/generated/source/proto/test/java">
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/proto/test/java" isTestSource="true" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/src/test">
++      <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="HW-1.gradle-8.6.main" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-services:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-protobuf:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-testing:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-stub:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-inprocess:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: junit:junit:4.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.mockito:mockito-core:5.10.0" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-util:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-protobuf-lite:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-api:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.api.grpc:proto-google-common-protos:2.22.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-java:3.24.0" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.guava:guava:32.0.1-android" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-core:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest-core:1.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.14.11" level="project" />
++    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.14.11" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.20.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.guava:failureaccess:1.0.1" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
++    <orderEntry type="library" name="Gradle: org.checkerframework:checker-qual:3.33.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:2.8" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-netty-shaded:1.59.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.protobuf:protobuf-java-util:3.24.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.guava:guava:32.0.1-jre" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.10.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.perfmark:perfmark-api:0.26.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:3.3" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.23" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-context:1.59.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.android:annotations:4.1.1.4" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
++  </component>
++  <component name="TestModuleProperties" production-module="gradle-8.6.main" />
++</module>
+\ No newline at end of file
+Index: HW-1.gradle-8.6.main.iml
+===================================================================
+diff --git a/HW-1.gradle-8.6.main.iml b/HW-1.gradle-8.6.main.iml
+new file mode 100644
+--- /dev/null	
++++ b/HW-1.gradle-8.6.main.iml	
+@@ -0,0 +1,50 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module external.linked.project.id="gradle-8.6:main" external.linked.project.path="$MODULE_DIR$" external.root.project.path="$MODULE_DIR$" external.system.id="GRADLE" external.system.module.group="" external.system.module.type="sourceSet" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <output url="file://$MODULE_DIR$/build/classes/java/main" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$/build/extracted-include-protos/main">
++      <sourceFolder url="file://$MODULE_DIR$/build/extracted-include-protos/main" isTestSource="false" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/extracted-protos/main">
++      <sourceFolder url="file://$MODULE_DIR$/build/extracted-protos/main" isTestSource="false" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/generated/source/proto/main/grpc">
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/proto/main/grpc" isTestSource="false" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/build/generated/source/proto/main/java">
++      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/proto/main/java" isTestSource="false" generated="true" />
++    </content>
++    <content url="file://$MODULE_DIR$/src/main">
++      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
++      <sourceFolder url="file://$MODULE_DIR$/src/main/proto" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apache.tomcat:annotations-api:6.0.53" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-services:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-protobuf:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-stub:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-util:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-protobuf-lite:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-api:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.code.findbugs:jsr305:3.0.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.api.grpc:proto-google-common-protos:2.22.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.protobuf:protobuf-java:3.24.0" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Gradle: com.google.guava:guava:32.0.1-android" level="project" />
++    <orderEntry type="library" name="Gradle: io.grpc:grpc-core:1.59.1" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.errorprone:error_prone_annotations:2.20.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.guava:failureaccess:1.0.1" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
++    <orderEntry type="library" name="Gradle: org.checkerframework:checker-qual:3.33.0" level="project" />
++    <orderEntry type="library" name="Gradle: com.google.j2objc:j2objc-annotations:2.8" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-netty-shaded:1.59.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.protobuf:protobuf-java-util:3.24.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.guava:guava:32.0.1-jre" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.code.gson:gson:2.10.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.perfmark:perfmark-api:0.26.0" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.codehaus.mojo:animal-sniffer-annotations:1.23" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: io.grpc:grpc-context:1.59.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.google.android:annotations:4.1.1.4" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: gradle-8.6.iws
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"be75d5d0-a103-4baa-9c59-261b3d3606ed\" name=\"Changes\" comment=\"added performance tuning\">\r\n      <change beforePath=\"$PROJECT_DIR$/gradle-8.6.iml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gradle-8.6.iml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/gradle-8.6.ipr\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gradle-8.6.ipr\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/gradle-8.6.iws\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gradle-8.6.iws\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CreatePatchCommitExecutor\">\r\n    <option name=\"PATCH_PATH\" value=\"\" />\r\n    <option name=\"REVERSE_PATCH\" value=\"false\" />\r\n  </component>\r\n  <component name=\"DebuggerManager\">\r\n    <breakpoint_any converted=\"true\">\r\n      <breakpoint>\r\n        <option name=\"NOTIFY_CAUGHT\" value=\"true\" />\r\n        <option name=\"NOTIFY_UNCAUGHT\" value=\"true\" />\r\n        <option name=\"ENABLED\" value=\"false\" />\r\n        <option name=\"LOG_ENABLED\" value=\"false\" />\r\n        <option name=\"LOG_EXPRESSION_ENABLED\" value=\"false\" />\r\n        <option name=\"SUSPEND_POLICY\" value=\"SuspendAll\" />\r\n        <option name=\"COUNT_FILTER_ENABLED\" value=\"false\" />\r\n        <option name=\"COUNT_FILTER\" value=\"0\" />\r\n        <option name=\"CONDITION_ENABLED\" value=\"false\" />\r\n        <option name=\"CLASS_FILTERS_ENABLED\" value=\"false\" />\r\n        <option name=\"INSTANCE_FILTERS_ENABLED\" value=\"false\" />\r\n        <option name=\"CONDITION\" value=\"\" />\r\n        <option name=\"LOG_MESSAGE\" value=\"\" />\r\n      </breakpoint>\r\n      <breakpoint>\r\n        <option name=\"NOTIFY_CAUGHT\" value=\"true\" />\r\n        <option name=\"NOTIFY_UNCAUGHT\" value=\"true\" />\r\n        <option name=\"ENABLED\" value=\"false\" />\r\n        <option name=\"LOG_ENABLED\" value=\"false\" />\r\n        <option name=\"LOG_EXPRESSION_ENABLED\" value=\"false\" />\r\n        <option name=\"SUSPEND_POLICY\" value=\"SuspendAll\" />\r\n        <option name=\"COUNT_FILTER_ENABLED\" value=\"false\" />\r\n        <option name=\"COUNT_FILTER\" value=\"0\" />\r\n        <option name=\"CONDITION_ENABLED\" value=\"false\" />\r\n        <option name=\"CLASS_FILTERS_ENABLED\" value=\"false\" />\r\n        <option name=\"INSTANCE_FILTERS_ENABLED\" value=\"false\" />\r\n        <option name=\"CONDITION\" value=\"\" />\r\n        <option name=\"LOG_MESSAGE\" value=\"\" />\r\n      </breakpoint>\r\n    </breakpoint_any>\r\n    <breakpoint_rules converted=\"true\" />\r\n    <ui_properties converted=\"true\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <task path=\"$PROJECT_DIR$\">\r\n          <activation />\r\n        </task>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"gradle-8.6\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\"><![CDATA[{\r\n  \"history\": [\r\n    {\r\n      \"assignee\": \"anushakarki20\",\r\n      \"author\": \"anushakarki20\"\r\n    }\r\n  ],\r\n  \"lastFilter\": {\r\n    \"assignee\": \"anushakarki20\",\r\n    \"author\": \"anushakarki20\"\r\n  }\r\n}]]></component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/Ariel6789/HW-1.git&quot;,\r\n    &quot;accountId&quot;: &quot;09e369d3-df02-46f4-a9a0-f28817ef0e4e&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ModuleEditorState\">\r\n    <option name=\"LAST_EDITED_MODULE_NAME\" />\r\n    <option name=\"LAST_EDITED_TAB_NAME\" />\r\n  </component>\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 2\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2g9rtiz928bfRN0huO4cJG0HQCn\" />\r\n  <component name=\"ProjectInspectionProfilesVisibleTreeState\">\r\n    <entry key=\"Project Default\">\r\n      <profile-state />\r\n    </entry>\r\n  </component>\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectReloadState\">\r\n    <option name=\"STATE\" value=\"0\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"Gradle.ComputeTest.executor\": \"Profiler#1\",\r\n    \"Gradle.Upgrade Gradle wrapper.executor\": \"Run\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"git-widget-placeholder\": \"main\",\r\n    \"kotlin-language-version-configured\": \"true\",\r\n    \"node.js.detected.package.eslint\": \"true\",\r\n    \"node.js.detected.package.tslint\": \"true\",\r\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\r\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\r\n    \"nodejs_package_manager_path\": \"npm\",\r\n    \"vue.rearranger.settings.migration\": \"true\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RunManager\">\r\n    <configuration default=\"true\" type=\"Applet\" factoryName=\"Applet\">\r\n      <module name=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" />\r\n      <option name=\"HTML_FILE_NAME\" />\r\n      <option name=\"HTML_USED\" value=\"false\" />\r\n      <option name=\"WIDTH\" value=\"400\" />\r\n      <option name=\"HEIGHT\" value=\"300\" />\r\n      <option name=\"POLICY_FILE\" value=\"$APPLICATION_HOME_DIR$/bin/appletviewer.policy\" />\r\n      <option name=\"VM_PARAMETERS\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH_ENABLED\" value=\"false\" />\r\n      <option name=\"ALTERNATIVE_JRE_PATH\" />\r\n      <method>\r\n        <option name=\"BuildArtifacts\" enabled=\"false\" />\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"&lt;template&gt;\" type=\"WebApp\" default=\"true\" selected=\"false\">\r\n      <Host>localhost</Host>\r\n      <Port>5050</Port>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"Application\" factoryName=\"Application\">\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <method v=\"2\">\r\n        <option name=\"BuildArtifacts\" enabled=\"false\" />\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"JUnit\" factoryName=\"JUnit\">\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <option name=\"VM_PARAMETERS\" />\r\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\r\n      <option name=\"TEST_SEARCH_SCOPE\">\r\n        <value defaultName=\"moduleWithDependencies\" />\r\n      </option>\r\n      <method v=\"2\">\r\n        <option name=\"BuildArtifacts\" enabled=\"false\" />\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration default=\"true\" type=\"Remote\">\r\n      <option name=\"USE_SOCKET_TRANSPORT\" value=\"true\" />\r\n      <option name=\"SERVER_MODE\" value=\"false\" />\r\n      <option name=\"SHMEM_ADDRESS\" value=\"javadebug\" />\r\n      <option name=\"HOST\" value=\"localhost\" />\r\n      <option name=\"PORT\" value=\"5005\" />\r\n      <option name=\"AUTO_RESTART\" value=\"false\" />\r\n      <method v=\"2\">\r\n        <option name=\"BuildArtifacts\" enabled=\"false\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240\" />\r\n        <option value=\"bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\" maxAnnotateRevisions=\"500\">\r\n    <option name=\"USER\" value=\"\" />\r\n    <option name=\"PASSWORD\" value=\"\" />\r\n    <option name=\"LAST_MERGED_REVISION\" />\r\n    <option name=\"UPDATE_RUN_STATUS\" value=\"false\" />\r\n    <option name=\"MERGE_DRY_RUN\" value=\"false\" />\r\n    <option name=\"MERGE_DIFF_USE_ANCESTRY\" value=\"true\" />\r\n    <option name=\"UPDATE_LOCK_ON_DEMAND\" value=\"false\" />\r\n    <option name=\"IGNORE_SPACES_IN_MERGE\" value=\"false\" />\r\n    <option name=\"DETECT_NESTED_COPIES\" value=\"true\" />\r\n    <option name=\"IGNORE_SPACES_IN_ANNOTATE\" value=\"true\" />\r\n    <option name=\"SHOW_MERGE_SOURCES_IN_ANNOTATE\" value=\"true\" />\r\n    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"be75d5d0-a103-4baa-9c59-261b3d3606ed\" name=\"Changes\" comment=\"\" />\r\n      <created>1715120850894</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1715120850894</updated>\r\n      <workItem from=\"1715120851744\" duration=\"3548000\" />\r\n      <workItem from=\"1715203761121\" duration=\"7721000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"added performance tuning\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715286743680</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715286743680</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"added performance tuning\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715286928033</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715286928033</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"added performance tuning\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1715287159251</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1715287159251</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"added performance tuning\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"added performance tuning\" />\r\n    <option name=\"MAKE_NEW_CHANGELIST_ACTIVE\" value=\"true\" />\r\n  </component>\r\n  <component name=\"XDebuggerManager\">\r\n    <breakpoint-manager>\r\n      <breakpoints>\r\n        <line-breakpoint enabled=\"true\" type=\"java-line\">\r\n          <url>file://$PROJECT_DIR$/src/main/java/userinterface/UserInterface.java</url>\r\n          <line>17</line>\r\n          <option name=\"timeStamp\" value=\"1\" />\r\n        </line-breakpoint>\r\n      </breakpoints>\r\n    </breakpoint-manager>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/gradle-8.6.iws b/gradle-8.6.iws
+--- a/gradle-8.6.iws	
++++ b/gradle-8.6.iws	
+@@ -5,10 +5,13 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="be75d5d0-a103-4baa-9c59-261b3d3606ed" name="Changes" comment="added performance tuning">
+-      <change beforePath="$PROJECT_DIR$/gradle-8.6.iml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle-8.6.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/HW-1.gradle-8.6.main.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/HW-1.gradle-8.6.test.iml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/gradle-8.6.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/gradle-8.6.ipr" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/gradle-8.6.iws" beforeDir="false" afterPath="$PROJECT_DIR$/gradle-8.6.iws" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -73,6 +76,33 @@
+                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                 <item name="gradle-8.6" type="f1a62948:ProjectNode" />
+               </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="gradle-8.6" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="gradle-8.6" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="build setup" type="c8890929:TasksNode$1" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="gradle-8.6" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="help" type="c8890929:TasksNode$1" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="gradle-8.6" type="f1a62948:ProjectNode" />
++                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="gradle-8.6" type="f1a62948:ProjectNode" />
++                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
++              </path>
+             </expand>
+             <select />
+           </tree_state>
+@@ -81,6 +111,11 @@
+     </system>
+   </component>
+   <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="performance" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+@@ -91,16 +126,19 @@
+     }
+   ],
+   "lastFilter": {
+-    "assignee": "anushakarki20",
+-    "author": "anushakarki20"
+   }
+ }]]></component>
+-  <component name="GithubPullRequestsUISettings">{
+-  &quot;selectedUrlAndAccountId&quot;: {
+-    &quot;url&quot;: &quot;https://github.com/Ariel6789/HW-1.git&quot;,
+-    &quot;accountId&quot;: &quot;09e369d3-df02-46f4-a9a0-f28817ef0e4e&quot;
+-  }
+-}</component>
++  <component name="GithubPullRequestsUISettings">
++    <option name="selectedUrlAndAccountId">
++      <UrlAndAccount>
++        <option name="accountId" value="d67bf57b-eb16-4b33-833c-fd8a884ffbe3" />
++        <option name="url" value="https://github.com/Ariel6789/HW-1.git" />
++      </UrlAndAccount>
++    </option>
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ModuleEditorState">
+     <option name="LAST_EDITED_MODULE_NAME" />
+     <option name="LAST_EDITED_TAB_NAME" />
+@@ -108,9 +146,9 @@
+   <component name="ProblemsViewState">
+     <option name="selectedTabId" value="CurrentFile" />
+   </component>
+-  <component name="ProjectColorInfo">{
+-  &quot;associatedIndex&quot;: 2
+-}</component>
++  <component name="ProjectColorInfo"><![CDATA[{
++  "associatedIndex": 4
++}]]></component>
+   <component name="ProjectId" id="2g9rtiz928bfRN0huO4cJG0HQCn" />
+   <component name="ProjectInspectionProfilesVisibleTreeState">
+     <entry key="Project Default">
+@@ -128,9 +166,18 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "Gradle.ComputeTest.executor": "Profiler#1",
++    "Gradle.HW-1 [build].executor": "Run",
++    "Gradle.HW-1 [dependencies].executor": "Run",
++    "Gradle.HW-1 [init].executor": "Run",
++    "Gradle.HW-1 [projects].executor": "Run",
++    "Gradle.HW-1 [tasks].executor": "Run",
++    "Gradle.HW-1 [wrapper].executor": "Run",
++    "Gradle.HW-1.executor": "Debug",
+     "Gradle.Upgrade Gradle wrapper.executor": "Run",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "main",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "performance",
+     "kotlin-language-version-configured": "true",
+     "node.js.detected.package.eslint": "true",
+     "node.js.detected.package.tslint": "true",
+@@ -168,6 +215,116 @@
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
++    <configuration name="HW-1 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="build" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>false</RunAsTest>
++      <method v="2" />
++    </configuration>
++    <configuration name="HW-1 [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="dependencies" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>false</RunAsTest>
++      <method v="2" />
++    </configuration>
++    <configuration name="HW-1 [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="init" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>false</RunAsTest>
++      <method v="2" />
++    </configuration>
++    <configuration name="HW-1 [projects]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="projects" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>false</RunAsTest>
++      <method v="2" />
++    </configuration>
++    <configuration name="HW-1 [tasks]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="tasks" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <RunAsTest>false</RunAsTest>
++      <method v="2" />
++    </configuration>
+     <configuration default="true" type="JUnit" factoryName="JUnit">
+       <option name="TEST_OBJECT" value="class" />
+       <option name="VM_PARAMETERS" />
+@@ -191,12 +348,20 @@
+         <option name="BuildArtifacts" enabled="false" />
+       </method>
+     </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Gradle.HW-1 [tasks]" />
++        <item itemvalue="Gradle.HW-1 [dependencies]" />
++        <item itemvalue="Gradle.HW-1 [projects]" />
++        <item itemvalue="Gradle.HW-1 [build]" />
++        <item itemvalue="Gradle.HW-1 [init]" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
++        <option value="jdk-19.0.2-corretto-19.0.2-4caba194b151-48ba4555" />
+       </set>
+     </attachedChunks>
+   </component>
+@@ -224,6 +389,7 @@
+       <updated>1715120850894</updated>
+       <workItem from="1715120851744" duration="3548000" />
+       <workItem from="1715203761121" duration="7721000" />
++      <workItem from="1715306680494" duration="2018000" />
+     </task>
+     <task id="LOCAL-00001" summary="added performance tuning">
+       <option name="closed" value="true" />
+@@ -255,9 +421,20 @@
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="added performance tuning" />
+-    <option name="LAST_COMMIT_MESSAGE" value="added performance tuning" />
++    <option name="LAST_COMMIT_MESSAGE" value="" />
+     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+   </component>
+   <component name="XDebuggerManager">
+@@ -265,10 +442,14 @@
+       <breakpoints>
+         <line-breakpoint enabled="true" type="java-line">
+           <url>file://$PROJECT_DIR$/src/main/java/userinterface/UserInterface.java</url>
+-          <line>17</line>
++          <line>16</line>
+           <option name="timeStamp" value="1" />
+         </line-breakpoint>
+       </breakpoints>
++      <default-breakpoints>
++        <breakpoint enabled="true" type="java-exception" />
++        <breakpoint enabled="true" type="javascript-exception" />
++      </default-breakpoints>
+     </breakpoint-manager>
+   </component>
+ </project>
+\ No newline at end of file

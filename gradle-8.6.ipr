@@ -11,7 +11,11 @@
       <entry name="!?*.groovy" />
       <entry name="!?*.java" />
     </wildcardResourcePatterns>
-    <bytecodeTargetLevel target="22" />
+    <bytecodeTargetLevel target="22">
+      <module name="gradle-8.6" target="19" />
+      <module name="HW-1.gradle-8.6.main" target="19" />
+      <module name="HW-1.gradle-8.6.test" target="19" />
+    </bytecodeTargetLevel>
   </component>
   <component name="CopyrightManager" default="">
     <module2copyright />
@@ -68,12 +72,14 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/HW-1.gradle-8.6.main.iml" filepath="$PROJECT_DIR$/HW-1.gradle-8.6.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW-1.gradle-8.6.test.iml" filepath="$PROJECT_DIR$/HW-1.gradle-8.6.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.iml" filepath="$PROJECT_DIR$/gradle-8.6.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.main.iml" filepath="$PROJECT_DIR$/gradle-8.6.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradle-8.6.test.iml" filepath="$PROJECT_DIR$/gradle-8.6.test.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" default="true" project-jdk-name="19" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RemoteRepositoriesConfiguration">
